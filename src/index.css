@@ -1,13 +1,500 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.h3 {
+    text-align: center;
+    margin-top: 1.5em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+/*.ci{
+    float: left;
+ }*/   
+ 
+   
+
+.contner{
+    
+   background-color: rgba(195, 220, 240, 0.7);
+   padding-left: 0%;
+   margin-left: 0%;
+   padding-right: 0%;
+   margin-top: 0em;
+   border-top: 3em solid rgba(195, 220, 240, 0.744);
+   
+ 
+   width: 100%;
+}
+@media (min-width:1300px){
+    .h3{
+        font-size: 35px;
+    }
+    .contner{
+        height: 460px;
+         }
+         .cnt{
+            height: 46px;
+            background-color: rgba(4, 47, 82, 0.9);
+        }
+         
+   .image{
+    margin-left:10px ;
+    height: 250px;
+    margin-top: 10px;
+   
+    
+   }
+
+    .text{
+            padding-top: 20px;
+            padding-left: 20px;
+            
+            font-size: 22px;
+            }
+            .btn{
+                
+                margin-top: 15px;
+    
+            }
+        }
+@media (min-width:1000px) and (max-width:1300px){
+    .image{
+        padding-left:20px ;
+        margin-top: 15px;
+        height: 220px;
+        
+        
+       }
+       .cnt{
+        height: 40px;
+        background-color: rgba(4, 47, 82, 0.9);
+    }
+     
+       .contner{
+        height: 400px;
+         }
+.text{
+   padding-top: 15px;
+        padding-left: 15px;
+        font-size: 18px;
+        }
+        .btn{
+            
+            margin-top: 10px;
+
+        }
+    }
+    @media (min-width:776px) and (max-width:1000px){
+        .image{
+            padding-left: 20px ;
+            margin-top: 18px;
+            height: 220px;
+            
+            
+           }
+           .cnt{
+            height: 38px;
+            background-color: rgba(4, 47, 82, 0.9);
+        }
+           .contner{
+            height: 380px;
+           }
+        .text{
+           padding-top: 15px;
+                padding-left: 8px;
+                font-size: 17px;
+            }
+            .btn{
+                
+                margin-top: 10px;
+    
+            }
+            }
+            @media (min-width:767px) and (max-width:776px){
+                .h3{
+                    margin-top: 0.8em;
+                    font-size: 20px;
+                }
+                .contner{
+                    height: 350px;
+                     }
+                     .cnt{
+                        height: 35px;
+                        background-color: rgba(4, 47, 82, 0.9);
+                    }
+                .image{
+                   align-items: center;
+                   height: 200px;
+                   width: 260px;
+                   padding-left: 20px;
+                   padding-right: 20px;
+                   padding-top: 10px;
+
+
+
+                    
+                   }
+                .text{
+                    padding-top: 10px;
+                   text-align: left;
+                   font-size: 14.5px;
+                    }
+                    .btn{
+                        
+                        margin-top: 10px;
+                        font-size: 12px;
+            
+                    }
+                    }
+                    @media (min-width:631px) and (max-width:767px){
+                        .h3{
+                            margin-top: 0.8em;
+                            font-size: 20px;
+                        }
+                        .contner{
+                            height: 480px;
+                             }
+                             .cnt{
+                                height: 35px;
+                                background-color: rgba(4, 47, 82, 0.9);
+                            }
+                        .image{
+                           align-items: center;
+                           height: 200px;
+                           padding-left: 50px;
+                           padding-right: 50px;
+                           padding-top: 10px;
+        
+        
+        
+                            
+                           }
+                        .text{
+                            padding-top: 10px;
+                           text-align: left;
+                           font-size: 14.5px;
+                            }
+                            .btn{
+                                
+                                margin-top: 10px;
+                                font-size: 12px;
+                    
+                            }
+                            }
+                    @media (min-width:514px) and (max-width:631px){
+                        
+                        .h3{
+                            margin-top: 0.8em;
+                            font-size: 18px;
+                        }
+                        .contner{
+                            height: 480px;
+                             }
+                             .cnt{
+                                height: 32px;
+                                background-color: rgba(4, 47, 82, 0.9);
+                            }
+                        .image{
+                           align-items: center;
+                           height: 180px;
+                           padding-left: 60px;
+                           padding-right: 60px;
+                           padding-top: 10px;
+        
+        
+        
+                            
+                           }
+                        .text{
+                            padding-left: 20px;
+                            padding-top: 10px;
+                           text-align: left;
+                           font-size: 14px;
+                            }
+                            .btn{
+                                
+                                margin-top: 10px;
+                                font-size: 12px;
+                    
+                            }
+                            }
+                            @media (min-width:400px) and (max-width:514px){
+                               .h3{
+                    margin-top: 0.8em;
+                    font-size: 17px;
+                }
+                .contner{
+                    height: 480px;
+                     }
+                     .cnt{
+                        height: 30px;
+                        background-color: rgba(4, 47, 82, 0.9);
+                    }
+                .image{
+                   align-items: center;
+                   height: 170px;
+                   padding-left: 65px;
+                   padding-right: 65px;
+                   padding-top: 10px;
+
+
+
+                    
+                   }
+                .text{
+                    padding-left: 20px;
+                    padding-top: 10px;
+                   text-align: left;
+                   font-size: 13px;
+                    }
+                    .btn{
+                        
+                        margin-top: 10px;
+                        font-size: 12px;
+            
+                    }
+                                    }
+                                    @media (min-width:300px) and (max-width:400px){
+                                         .h3{
+                            margin-top: 0.8em;
+                            font-size: 16px;
+                        }
+                        .cnt{
+                            height: 30px;
+                            background-color: rgba(4, 47, 82, 0.9);
+                        }
+                        .contner{
+                            height: 480px;
+                             }
+                        .image{
+                           align-items: center;
+                           height: 150px;
+                           padding-left: 65px;
+                           padding-right: 65px;
+                           padding-top: 10px;
+        
+        
+        
+                            
+                           }
+                        .text{
+                            padding-left: 20px;
+                            padding-top: 10px;
+                           text-align: left;
+                           font-size: 12px;
+                            }
+                            .btn{
+                                
+                                margin-top: 10px;
+                                font-size: 11px;
+                    
+                            }
+                            }
+                            /*@media (min-width:400px) and (max-width:514px){
+                               .h3{
+                    margin-top: 0.8em;
+                    font-size: 17px;
+                }
+                .contner{
+                    height: 70vh;
+                     }
+                .image{
+                   align-items: center;
+                   height: 170px;
+                   padding-left: 65px;
+                   padding-right: 65px;
+                   padding-top: 10px;
+
+
+
+                    
+                   }
+                .text{
+                    padding-left: 20px;
+                    padding-top: 10px;
+                   text-align: left;
+                   font-size: 13px;
+                    }
+                    .btn{
+                        
+                        margin-top: 10px;
+                        font-size: 12px;
+                    }
+                    }
+                                        /*.ci{
+                                            margin-left:15px ;
+                                            margin-top: 15px;
+                                            height: 200px;
+                                            width:160px ;
+                                            
+                                           }
+                                        .text{
+                                            margin-top: 24px;
+                                                margin-left: 200px;
+                                                font-size: 13px;
+                                            }
+                                            .btn{
+                                                margin-left: 50px;
+                                                margin-top: 1.5px;
+                                                font-size: 12px;
+                                    
+                                            }
+                                            }
+                                          
+                                            @media (min-width:450px) and (max-width:500px){
+                                                .ci{
+                                                    margin-left:10px ;
+                                                    margin-top: 15px;
+                                                    height: 200px;
+                                                    width:150px ;
+                                                    
+                                                   }
+                                                .h3{
+                                                    font-size: 18px;
+                                                }
+                                                .text{
+                                                    margin-top: 24px;
+                                                        margin-left: 180px;
+                                                        font-size: 12px;
+                                                    }
+                                                    .btn{
+                                                        margin-left: 180px;
+                                                        margin-top: 1.5px;
+                                                        font-size: 12px;
+                                            
+                                                    }
+                                                    }
+                                                    @media (min-width:400px) and (max-width:450px){
+                                                        .ci{
+                                                            margin-left:10px ;
+                                                            margin-top: 15px;
+                                                            height: 200px;
+                                                            width:125px ;
+                                                            
+                                                           }
+                                                        .h3{
+                                                            font-size: 18px;
+                                                        }
+                                                        .text{
+                                                            margin-top: 20px;
+                                                                margin-left: 150px;
+                                                                font-size: 12px;
+                                                            }
+                                                            .btn{
+                                                                margin-left: 150px;
+                                                                margin-top: 1.5px;
+                                                                font-size: 11px;
+                                                    
+                                                            }
+                                                            }
+                                                            @media (min-width:340px) and (max-width:400px){
+                                                                .ci{
+                                                                    margin-left:10px ;
+                                                                    margin-top: 15px;
+                                                                    height: 200px;
+                                                                    width:120px ;
+                                                                    
+                                                                   }
+                                                                .h3{
+                                                                    font-size: 16px;
+                                                                }
+                                                                .text{
+                                                                    margin-top: 20px;
+                                                                        margin-left: 140px;
+                                                                        font-size: 11px;
+                                                                    }
+                                                                    .btn{
+                                                                        margin-left: 140px;
+                                                                        margin-top: 1px;
+                                                                        font-size: 11px;
+                                                            
+                                                                    }
+                                                                    }
+                                                                    @media (min-width:320px) and (max-width:340px){
+                                                                        .ci{
+                                                                            margin-left:10px ;
+                                                                            margin-top: 15px;
+                                                                            height: 200px;
+                                                                            width:115px ;
+                                                                            
+                                                                           }
+                                                                        .h3{
+                                                                            font-size: 15px;
+                                                                           
+                                                                        }
+                                                                        .text{
+                                                                            margin-top: 20px;
+                                                                    
+                                                                                margin-left: 140px;
+                                                                                font-size: 10px;
+                                                                            }
+                                                                            .btn{
+                                                                                margin-left: 140px;
+                                                                                margin-top: 1px;
+                                                                                font-size: 9px;
+                                                                    
+                                                                            }
+                                                                            }
+                                                                            @media (min-width:310px) and (max-width:320px){
+                                                                                .ci{
+                                                                                    margin-left:8px ;
+                                                                                    margin-top: 15px;
+                                                                                    height: 200px;
+                                                                                    width:115px ;
+                                                                                    
+                                                                                   }
+                                                                                .h3{
+                                                                                    font-size: 14px;
+                                                                                   
+                                                                                }
+                                                                                .text{
+                                                                                   
+                                                                            margin-top: 20px;
+                                                                    
+                                                                                        margin-left: 140px;
+                                                                                        font-size: 10px;
+                                                                                    }
+                                                                                    .btn{
+                                                                                        margin-left: 140px;
+                                                                                        margin-top: 0px;
+                                                                                        font-size: 8px;
+                                                                            
+                                                                                    }
+                                                                                    }
+                                                                                    @media (min-width:300px) and (max-width:310px){
+                                                                                        .ci{
+                                                                                            margin-left:8px ;
+                                                                                            margin-top: 15px;
+                                                                                            height: 200px;
+                                                                                            width:115px ;
+                                                                                            
+                                                                                           }
+                                                                                        .h3{
+                                                                                            font-size: 15px;
+                                                                                           
+                                                                                           
+                                                                                        }
+                                                                                       
+                                                                                        .text{
+                                                                                            margin-top: 20px;
+                                                                                                margin-left: 140px;
+                                                                                                font-size: 9.5px;
+                                                                                            }
+                                                                                            .btn{
+                                                                                                margin-left: 140px;
+                                                                                                margin-top: 0px;
+                                                                                                font-size: 6px;
+                                                                                    
+                                                                                            }
+                                                                                            }*/
+
+
+.btn {
+    background-color: rgba(195, 220, 240, 0.7);
+    border-radius: 5px;
+    border: 1px solid rgba(30, 50, 123, 1);
+
+
+}
+
+.link {
+    color: rgba(30, 50, 123, 1);
 }
