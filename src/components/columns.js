@@ -6,7 +6,7 @@ export default function columns() {
         <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">S no.</th>
       <th scope="col">Events</th>
       <th scope="col">Notification</th>
       <th scope="col">News</th>
