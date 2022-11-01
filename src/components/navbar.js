@@ -1,187 +1,222 @@
-import React from 'react';
-import logo from '../images/img1.png';
-import bg from '../images/bg1.png'
+import * as React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import logo from "../images/logo.png";
+import { Typography, Grid } from "@mui/material";
 
+const drawerWidth = "50%";
+const navItems = [
+  ["Home", "#home"],
+  ["About Us", "#about"],
+  ["People", "#people"],
+  ["Incentives", "#incentives"],
+  ["Research", "#research"],
+  ["Academics", "#academics"],
+];
+function DrawerAppBar(props) {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
 
-const mainPage = () => {
+  const drawer = (
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+        backgroundColor: "rgb(4,47,82)",
+        color: "white",
+        width: 1,
+        height: 1,
+      }}
+    >
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <a
+                href={item[1]}
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <ListItemText primary={item[0]} />
+              </a>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
-    let myStyle = {
-        color : 'red',
-        backgroundColor: 'rgba(4, 47, 82, 0.8)',
-        borderColor: '#042F52',
-        width: '1920px',
-        height: '170px',
-        left: '0px',
-         top: '0px'
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
-    }
+  React.useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        document.querySelector(".header").classList.remove("bg-transparent");
+        document.querySelector(".header").classList.add("bg-dark");
+        // document.querySelector(".logo").style.display = "flex";
+      } else {
+        document.querySelector(".header").classList.add("bg-transparent");
+        document.querySelector(".header").classList.remove("bg-dark");
+        // document.querySelector(".logo").style.display = "none";
+      }
+    });
+  }, []);
+
   return (
+    <Box sx={{ display: "flex" }}>
+      <AppBar
+        component="nav"
+        sx={{
+          boxShadow: "none",
+          height: "15vh",
+          backgroundColor: "rgb(4,47,82,0.8)",
+          justifyContent: "center",
+        }}
+        className="header"
+      >
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Box sx={{ display: { md: "none", marginTop: "10px" } }}>
+            <a href="#home" style={{ textDecoration: "none" }}>
+              <img
+                src={logo}
+                alt=""
+                style={{
+                  width: "150px",
+                }}
+              />
+            </a>
+          </Box>
 
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="end"
+            onClick={handleDrawerToggle}
+            sx={{ display: { sm: "none" }, float: "right" }}
+          >
+            <MenuIcon sx={{ color: "#fff", textAlign: "right" }} />
+          </IconButton>
+          <Grid
+            container
+            justifyContent="left"
+            direction="row"
+            alignItems="center"
+          >
+            <Grid item>
+              <Box
+                sx={{ marginTop: "10px", display: { xs: "none", md: "block" } }}
+              >
+                <a href="#home">
+                  <img
+                    src={logo}
+                    alt=""
+                    style={{
+                      width: "5vw",
+                    }}
+                  />
+                </a>
+              </Box>
+            </Grid>
+            <Grid item>
+              <Typography
+                align="left"
+                sx={{
+                  fontSize: "1.5rem",
+                  fontFamily: "Calibri",
+                  fontWeight: "600",
+                  marginLeft: 3,
+                }}
+              >
+                DEPARTMENT OF ELECTRICAL ENGINEERING
+              </Typography>
+              <Typography
+                align="left"
+                sx={{
+                  fontSize: "1.1rem",
+                  fontFamily: "Calibri",
+                  fontWeight: "600",
+                  marginLeft: 3,
+                }}
+              >
+                INDIAN INSTITUTE OF TECHNOLOGY
+              </Typography>
+            </Grid>
+          </Grid>
 
-
-    <nav className="navbar navbar-expand-sm navbar-dark bg-success" >
-    <div className="container-fluid " style={myStyle}>
-        <img src={logo} alt="" />
-      <a className="navbar-brand  mx-3" href="#">Indian Institute of Technology , Indore</a>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul className="navbar-nav ">
-          <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">About us</a>
-          </li>			
-          <li className="nav-item">
-            <a className="nav-link" href="#">People</a>
-          </li>			
-          <li className="nav-item">
-            <a className="nav-link" href="#">Reasearch</a>
-          </li>			
-          <li className="nav-item">
-            <a className="nav-link" href="#">Academics</a>
-          </li>			
-        </ul>		  
-      </div>
-    </div>
-    
-  </nav>
-   
-   
-   
-
-        
-
-   
-    
-  )
+          <Grid
+            container
+            justifyContent="right"
+            direction="row"
+            height="100%"
+            alignItems="flex-end"
+          >
+            <Grid item>
+              <Box sx={{margin:1, display: { xs: "none", md: "block" } }}>
+                {navItems.map((item) => (
+                  <a
+                    href={item[1]}
+                    key={item}
+                    style={{
+                      color: "#fff",
+                        fontSize: "1.1rem",
+                      fontWeight:"600",
+                      padding: "18px",
+                      textDecoration: "none",
+                      verticalAlign: "bottom",
+                    }}
+                  >
+                    {item[0]}
+                  </a>
+                ))}
+              </Box>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          //   container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          anchor="right"
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: "block", md: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+    </Box>
+  );
 }
 
-export default mainPage
+DrawerAppBar.propTypes = {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
 
-
-// import React from 'react';
-// import { makeStyles } from '@material-ui/core/styles';
-// import AppBar from '@material-ui/core/AppBar';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import Typography from '@material-ui/core/Typography';
-// import Button from '@material-ui/core/Button';
-// import IconButton from '@material-ui/core/IconButton';
-// import MenuIcon from '@material-ui/icons/Menu';
-// import logo from '../images/img1.png';
-// import bg from '../images/bg1.png'
-
-
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         flexGrow: 1,
-       
-//         width: '1920px',
-//         height: '170px'
-//     },
-//     menuButton: {
-//         marginRight: theme.spacing(2),
-//         color: 'black'
-//     },
-//     title: {
-//         flexGrow: 1,
-//         color: 'black'
-//     },
-//     appBarTransparent: {
-//         backgroundColor: 'rgba(4, 47, 82,0.8)'
-//     },
-//     // rgba(4, 47, 82, 0.8);
-//     appBarSolid: {
-//         backgroundColor: 'rgba(67, 129, 168)'
-//     },
-//     logo: {
-//      position: 'absolute',
-//      width: '114px',
-//      height: '123px',
-//      left: '47px',
-//      top: '24px'
-//     },
-//     bg:{
-//         position: 'absolute',
-//         width: '1920px',
-//         height: '597px',
-//         left: '0px',
-//         top: '0px'
-//     }
-   
-
-    
-// }));
-
-// export default function ButtonAppBar() {
-//     const classes = useStyles();
-
-//     return (
-//         <div className={classes.root}>
-//             <AppBar position="fixed" className={classes.appBarTransparent}>
-//                 <Toolbar>
-//                     <div className={classes.logo}>
-//                     <img src={logo} alt="" />
-
-//                     </div>
-                    
-                    
-//                 <Typography variant="h6" className={classes.title}>
-//                     Indian Institute of Technology , Indore
-//                </Typography>
-//                     <Button color="black">Home</Button>
-//                     <Button color="black">About us</Button>
-//                     <Button color="black">People</Button>
-//                     <Button color="black">Research</Button>
-//                     <Button color="black"></Button>
-//                 </Toolbar>
-//             </AppBar>
-//             <div className={bg}>
-//             <img src={bg} alt="" />
-
-//             <div className="container text-center">
-//   <div className="row align-items-start">
-//     <div className="col">
-//       One of three columns
-//     </div>
-//     <div className="col">
-//       One of three columns
-//     </div>
-//     <div className="col">
-//       One of three columns
-//     </div>
-//   </div>
-//   <div className="row align-items-center">
-//     <div className="col">
-//       One of three columns
-//     </div>
-//     <div className="col">
-//       One of three columns
-//     </div>
-//     <div className="col">
-//       One of three columns
-//     </div>
-//   </div>
-//   <div className="row align-items-end">
-//     <div className="col">
-//       One of three columns
-//     </div>
-//     <div className="col">
-//       One of three columns
-//     </div>
-//     <div className="col">
-//       One of three columns
-//     </div>
-//   </div>
-// </div>
-
-//             </div>
-            
-//         </div>
-        
-//     );
-// }
-
+export default DrawerAppBar;

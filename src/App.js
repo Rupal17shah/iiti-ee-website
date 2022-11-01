@@ -1,22 +1,13 @@
-import React from 'react'
-import NavBar from './components/navbar'
-import Body from './components/body';
-import Columns from './components/columns';
+import logo from './logo.svg';
+import './App.css';
+import Home from './pages/Home';
 
-const App = () => {
+function App() {
   return (
-    <>
-  <NavBar/>
-  <Body/>
-  <Columns/>
-  </>
-  
-  
-  
-  
-  
+    <div className="App">
+      <Home/>
+    </div>
   );
-      
 }
 
 export default App;
