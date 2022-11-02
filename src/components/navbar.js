@@ -19,7 +19,6 @@ const navItems = [
   ["Home", "#home"],
   ["About Us", "#about"],
   ["People", "#people"],
-  ["Incentives", "#incentives"],
   ["Research", "#research"],
   ["Academics", "#academics"],
 ];
@@ -61,19 +60,19 @@ function DrawerAppBar(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-  React.useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) {
-        document.querySelector(".header").classList.remove("bg-transparent");
-        document.querySelector(".header").classList.add("bg-dark");
-        // document.querySelector(".logo").style.display = "flex";
-      } else {
-        document.querySelector(".header").classList.add("bg-transparent");
-        document.querySelector(".header").classList.remove("bg-dark");
-        // document.querySelector(".logo").style.display = "none";
-      }
-    });
-  }, []);
+  // React.useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     if (window.scrollY > 200) {
+  //       document.querySelector(".header").classList.remove("bg-transparent");
+  //       document.querySelector(".header").classList.add("bg-dark");
+  //       // document.querySelector(".logo").style.display = "flex";
+  //     } else {
+  //       document.querySelector(".header").classList.add("bg-transparent");
+  //       document.querySelector(".header").classList.remove("bg-dark");
+  //       // document.querySelector(".logo").style.display = "none";
+  //     }
+  //   });
+  // }, []);
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -82,10 +81,11 @@ function DrawerAppBar(props) {
         sx={{
           boxShadow: "none",
           height: "15vh",
-          backgroundColor: "rgb(4,47,82,0.8)",
+          backgroundColor: "rgb(4,47,82)",
           justifyContent: "center",
         }}
         className="header"
+       
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <Box sx={{ display: { md: "none", marginTop: "10px" } }}>
@@ -164,15 +164,15 @@ function DrawerAppBar(props) {
             alignItems="flex-end"
           >
             <Grid item>
-              <Box sx={{margin:1, display: { xs: "none", md: "block" } }}>
+              <Box sx={{ margin: 1, display: { xs: "none", md: "block" } }}>
                 {navItems.map((item) => (
                   <a
                     href={item[1]}
                     key={item}
                     style={{
                       color: "#fff",
-                        fontSize: "1.1rem",
-                      fontWeight:"600",
+                      fontSize: "1.1rem",
+                      fontWeight: "600",
                       padding: "18px",
                       textDecoration: "none",
                       verticalAlign: "bottom",

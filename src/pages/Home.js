@@ -1,11 +1,19 @@
 import React from "react";
 import "./Home.css";
 import Navbar from "../components/Navbar";
-import { Grid, Typography, Card, Box } from "@mui/material";
+import { Grid, Typography, Card, Box, Button } from "@mui/material";
 import Calendar from "moedim";
-
+import about from "../images/about.jpg";
+import Carousel from "react-bootstrap/Carousel";
+import bg from '../images/bg.png';
+    
 export default function Home() {
-  const [value, setValue] = React.useState(new Date());
+    const [value, setValue] = React.useState(new Date());
+    const [index, setIndex] = React.useState(0);
+
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
   return (
     <>
       <div className="home">
@@ -94,7 +102,7 @@ export default function Home() {
           justifyContent="center"
           direction="row"
           alignItems="center"
-          sx={{ height: "43vh" }}
+          sx={{ height: "37vh" }}
         >
           <Grid
             item
@@ -174,22 +182,120 @@ export default function Home() {
               </Grid>
             </Grid>
           </Grid>
-              </Grid>
+        </Grid>
 
-            <Grid
+        <Grid
           container
           justifyContent="left"
           direction="row"
           alignItems="center"
           sx={{ height: 50, backgroundColor: "rgb(4,47,82)" }}
-              >
-                  <Grid item>
-                      <Typography align="left ">
-                          Latest News Flash 
-                      </Typography>
-                  </Grid>
+        >
+          <Grid item>
+            <Typography align="left " sx={{ color: "white", marginX: 5 }}>
+              Latest News Flash
+            </Typography>
+          </Grid>
         </Grid>
-              
+        <Grid
+          container
+          justifyContent="space-around"
+          direction="row"
+          sx={{ backgroundColor: "#C3DCF0" }}
+        >
+          <Typography
+            variant="h5"
+            sx={{ fontFamily: "calibri", fontWeight: "600", my: 10 }}
+          >
+            MORE ABOUT ELECTRICAL DEPARTMENT
+          </Typography>
+          <Grid
+            container
+            justifyContent="space-around"
+            direction="row"
+            sx={{ height: "45vh" }}
+          >
+            <Grid item xs={6}>
+              <img src={about} style={{ width: "25vw" }} />
+            </Grid>
+            <Grid item xs={6}>
+              <Typography align="left" sx={{ mx: 15, my: 4 }}>
+                Welcome to the website of the Department of Electrical
+                Engineering, IIT Indore. The department offers B.Tech, M.S
+                (Research), M.Tech and Ph.D. programs in Electrical Engineering.
+                The department currently has 15 faculty members with expertise
+                in diverse areas including Power Systems and Power Electronics,
+                Integration of Renewable Energy Sources, Smart Grid,
+                Nanotechnology and Nanoelectronics, Communications and
+                Networking, Signal Processing, Bio-photonics.
+              </Typography>
+              <Button variant="outlined" sx={{ color: "#1E327B" }}>
+                Learn More
+              </Button>
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            justifyContent="left"
+            direction="row"
+            alignItems="center"
+            sx={{ height: 50, backgroundColor: "rgb(4,47,82)" }}
+          ></Grid>
+
+          <Grid
+            container
+            justifyContent="left"
+            direction="row"
+            sx={{ height: "60vh", backgroundColor: "#fff" }}
+          >
+            <div className="container">
+              <div className="row">
+                <Box>
+                  <Typography
+                    variant="h4"
+                    align="left"
+                    sx={{ mt: 15, fontWeight: 600 }}
+                  >
+                    GLIMPSES...
+                  </Typography>
+                </Box>
+                <div className="conatainer">
+                  <Carousel activeIndex={index} onSelect={handleSelect}>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100"
+                        src={bg}
+                        alt="First slide"
+                      />
+                    </Carousel.Item>
+                    {/* <Carousel.Item>
+                      <img
+                        className="d-block w-100"
+                        src={about}
+                        alt="Second slide"
+                      />
+                    </Carousel.Item> */}
+                    {/* <Carousel.Item>
+                      <img
+                        className="d-block w-100"
+                        src={image3}
+                        alt="Third slide"
+                      />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img
+                        className="d-block w-100"
+                        src={image4}
+                        alt="fourth slide"
+                      />
+                    </Carousel.Item> */}
+                  </Carousel>
+                </div>
+              </div>
+            </div>
+                  </Grid>
+                
+        </Grid>
       </div>
     </>
   );
