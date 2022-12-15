@@ -6,6 +6,7 @@ import Calendar from "moedim";
 import about from "../images/about.jpg";
 import Carousel from "react-bootstrap/Carousel";
 import bg from '../images/bg.png';
+import Footer from "../components/Footer";
     
 export default function Home() {
     const [value, setValue] = React.useState(new Date());
@@ -296,6 +297,9 @@ export default function Home() {
                   </Grid>
                 
         </Grid>
+        <footer>
+          <Footer/>
+        </footer>
       </div>
     </>
   );

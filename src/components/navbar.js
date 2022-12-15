@@ -136,7 +136,7 @@ function DrawerAppBar(props) {
                 sx={{
                   fontSize: "1.5rem",
                   fontFamily: "Calibri",
-                  fontWeight: "600",
+                    fontWeight: "600",
                   marginLeft: 3,
                 }}
               >
