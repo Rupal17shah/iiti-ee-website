@@ -4,17 +4,11 @@ import Navbar from "../components/Navbar";
 import { Grid, Typography, Card, Box, Button } from "@mui/material";
 import Calendar from "moedim";
 import about from "../images/about.jpg";
-import Carousel from "react-bootstrap/Carousel";
-import bg from '../images/bg.png';
 import Footer from "../components/Footer";
+import Caraousel from "../components/Caraousel";
     
 export default function Home() {
     const [value, setValue] = React.useState(new Date());
-    const [index, setIndex] = React.useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
-    };
   return (
     <>
       <div className="home">
@@ -245,60 +239,24 @@ export default function Home() {
 
           <Grid
             container
-            justifyContent="left"
+            justifyContent="center"
             direction="row"
-            sx={{ height: "60vh", backgroundColor: "#fff" }}
+            sx={{ backgroundColor: "#C3DCF0" }}
           >
-            <div className="container">
-              <div className="row">
-                <Box>
-                  <Typography
-                    variant="h4"
-                    align="left"
-                    sx={{ mt: 15, fontWeight: 600 }}
-                  >
-                    GLIMPSES...
-                  </Typography>
-                </Box>
-                <div className="conatainer">
-                  <Carousel activeIndex={index} onSelect={handleSelect}>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100"
-                        src={bg}
-                        alt="First slide"
-                      />
-                    </Carousel.Item>
-                    {/* <Carousel.Item>
-                      <img
-                        className="d-block w-100"
-                        src={about}
-                        alt="Second slide"
-                      />
-                    </Carousel.Item> */}
-                    {/* <Carousel.Item>
-                      <img
-                        className="d-block w-100"
-                        src={image3}
-                        alt="Third slide"
-                      />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img
-                        className="d-block w-100"
-                        src={image4}
-                        alt="fourth slide"
-                      />
-                    </Carousel.Item> */}
-                  </Carousel>
-                </div>
-              </div>
-            </div>
-                  </Grid>
-                
+            <Box>
+              <Typography
+                variant="h4"
+                align="left"
+                sx={{ mt: 15, mb: 0, fontWeight: 600 }}
+              >
+                GLIMPSES...
+              </Typography>
+            </Box>
+          </Grid>
+          <Caraousel />
         </Grid>
         <footer>
-          <Footer/>
+          <Footer />
         </footer>
       </div>
     </>
