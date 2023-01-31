@@ -47,7 +47,9 @@ export default function Home() {
           </Button>
         </Grid>
       </Grid>
-      <Divider sx={{ bgcolor: "primary.main", borderBottomWidth: 1, opacity: 1 }} />
+      <Divider
+        sx={{ bgcolor: "primary.main", borderBottomWidth: 1, opacity: 1 }}
+      />
       {/* <hr style={{ color: "#9D0455", borderColor:"#9D0455"}}></hr> */}
       <Grid>
         {news === 1 ? (
@@ -61,8 +63,26 @@ export default function Home() {
         )}
       </Grid>
 
-      <Grid container>
-        <Grid item>
+      <Grid
+        container
+        justifyContent={{ xs: "center", sm: "left" }}
+        direction="row"
+        alignItems="center"
+        spacing={{ xs: 2, md: 4, sm: 6, lg: 8 }}
+      >
+        <Grid item xs={10} sm={8} md={6} lg={4}>
+          <Event />
+        </Grid>
+        <Grid item xs={10} sm={8} md={6} lg={4}>
+          <Event />
+        </Grid>
+        <Grid item xs={10} sm={8} md={6} lg={4}>
+          <Event />
+        </Grid>
+        <Grid item xs={10} sm={8} md={6} lg={4}>
+          <Event />
+        </Grid>
+        <Grid item xs={10} sm={8} md={6} lg={4}>
           <Event />
         </Grid>
       </Grid>
