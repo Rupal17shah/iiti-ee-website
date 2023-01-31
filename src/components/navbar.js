@@ -16,11 +16,11 @@ import { Typography, Grid } from "@mui/material";
 
 const drawerWidth = "50%";
 const navItems = [
-  ["Home", "#home"],
-  ["About Us", "#about"],
-  ["People", "#people"],
-  ["Research", "#research"],
-  ["Academics", "#academics"],
+  ["HOME", "#home"],
+  ["ABOUT US", "#about"],
+  ["PEOPLE", "#people"],
+  ["RESEARCH", "#research"],
+  ["ACADEMICS", "#academics"],
 ];
 function DrawerAppBar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -34,7 +34,7 @@ function DrawerAppBar(props) {
       onClick={handleDrawerToggle}
       sx={{
         textAlign: "center",
-        backgroundColor: "rgb(4,47,82)",
+        backgroundColor: "rgb(4,47,82,0.8)",
         color: "white",
         width: 1,
         height: 1,
@@ -81,7 +81,7 @@ function DrawerAppBar(props) {
         sx={{
           boxShadow: "none",
           height: "15vh",
-          backgroundColor: "rgb(4,47,82)",
+          backgroundColor: "rgb(4,47,82,0.8)",
           justifyContent: "center",
         }}
         className="header"

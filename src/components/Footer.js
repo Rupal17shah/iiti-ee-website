@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <div
       className="footer"
-      style={{ backgroundColor: "rgb(4,47,82,90)", height: "50vh" }}
+      style={{ backgroundColor: "rgb(4,47,82,90)", height: "70vh" }}
     >
       <div className="container" style={{ color: "white" }}>
         Achievements
@@ -70,8 +70,8 @@ export default function Footer() {
           container
           justifyContent="between"
           direction="row"
-          alignItems="center"
-          sx={{ height: 1, margin: 9 }}
+          alignItems="top"
+          sx={{ margin: 9 }}
         >
           <Grid item xs={2} sx={{ textAlign: "left" }}>
             <br />
@@ -86,19 +86,25 @@ export default function Footer() {
           </Grid>
           <Grid item xs={2} sx={{ textAlign: "left" }}>
             <br />
-            <h6>About Us</h6>
-            Department
+            <h6>People</h6>
+            Faculty
             <br />
-            Administration
+            Staff
             <br />
             Contact Us
             <br />
-            Gallery
+            phD students
+            <br />
+            MTech students
+            <br />
+            BTech students
+            <br />
+            Alumni
           </Grid>
           <Grid item xs={2} sx={{ textAlign: "left" }}>
             <br />
-            <h6>About Us</h6>
-            Department
+            <h6> Research </h6>
+            Research Areas
             <br />
             Administration
             <br />
