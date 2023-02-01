@@ -1,37 +1,26 @@
 import './App.css';
-import Home from './pages/HomePage';
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Container } from '@mui/material';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#9D0455",
-    },
-  },
-  props: {
-    MuiButtonBase: {
-      disableRipple: true,
-    },
-  },
-});
-
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './Theme';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <Container>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              {/* <Route path="/about/department" element={<AboutDepartment />} /> */}
-            </Routes>
-          </BrowserRouter>
-        </Container>
-      </div>
-    </ThemeProvider>
+    <>
+      <BrowserRouter>
+        <ThemeProvider theme={theme}>
+          <Header />
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+
+          </Routes>
+          <Footer />
+        </ThemeProvider>
+      </BrowserRouter>
+
+    </>
   );
 }
 
