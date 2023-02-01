@@ -1,7 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-// import AboutDepartment from './pages/AboutDepartment';
-import Home from './pages/Home';
+import Home from './pages/HomePage';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Container } from '@mui/material';
