@@ -1,16 +1,16 @@
 import { Box } from '@mui/system'
 import React from 'react'
-
+import AboutUs from './AboutUs'
+import Events from './Events'
 const Body = () => {
   return (
     <>
-
-    <Box sx={{p:7}}>
-
-        <h1>
-            This is my body
-        </h1>
+    <Box sx={{px:10}}>
+      <Events/>
+      <AboutUs/>
     </Box>
+
+
     </>
   )
 }

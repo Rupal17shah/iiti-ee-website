@@ -16,8 +16,8 @@ const Footer = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'start',
-          py: 5,
-          px: 7,
+          paddingTop:10,
+          px: 10,
 
         }}>
           <Box className='footer-info' sx={{ width: '30%', }}>
