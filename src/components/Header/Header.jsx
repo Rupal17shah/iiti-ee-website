@@ -16,6 +16,11 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 
 
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
+
 
 const navItems = [
   ["Home", "/"],
@@ -29,6 +34,7 @@ const navItems = [
 
 
 const Header = () => {
+  const theme = useTheme();
 
 
   const [state, setState] = React.useState({
@@ -92,28 +98,43 @@ const Header = () => {
   return (
 
     <>
-    <Link to='/'>
-      <Box className='logo-div' sx={{ display: 'flex', alignContent: 'center', px: 7, py: 1 }}>
-        <img className='logo-img' src='logo.png' alt='logo_image' />
-        <Box sx={{ my: 'auto' }}>
-          <Typography>
-            DEPARTMENT OF ELECTRICAL ENGINEERING
-          </Typography>
-          <Typography>
-            INDIAN INSTITUTE OF TECHNOLOGY INDORE
-          </Typography>
 
+
+      <AppBar position="static" color="secondary" >
+
+        <Container maxWidth="xl" disableGutters={useMediaQuery(theme.breakpoints.only('xs'))}>
+        <Box className='logo-div' sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', px: 3 , py:1, mx:'auto'}}>
+          <Box>
+            <img className='logo-img-mobile' src='logo.png' alt='logo_image'  />
+          </Box>
+          <Box >
+            <Typography >
+              Department Of Electical Engineering
+              Indian Institute Of Technology
+
+            </Typography>
+
+          </Box>
         </Box>
-      </Box>
-    </Link>
-      <AppBar position="static" color="primary" >
-        <Container maxWidth="xl">
+
           <Toolbar disableGutters>
+            <Box className='logo-div' sx={{ display: { xs: 'none', md: 'flex' }, alignContent: 'center', px: 7, py: 1 }}>
+              <img className='logo-img' src='logo.png' alt='logo_image' />
+              <Box sx={{ my: 'auto', px: 2 }}>
+                <Typography >
+                  DEPARTMENT OF ELECTRICAL ENGINEERING
+                </Typography>
+                <Typography >
+                  INDIAN INSTITUTE OF TECHNOLOGY INDORE
+                </Typography>
+
+              </Box>
+            </Box>
+
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', backgroundColor: '#9d0455', width:'100%' } }}>
 
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-
-
+          
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -121,9 +142,11 @@ const Header = () => {
                 aria-haspopup="true"
                 onClick={toggleDrawer('left', true)}
                 color="inherit"
+                sx={{ ml: 'auto' }}
               >
                 <MenuIcon />
               </IconButton>
+
               <Drawer
                 anchor={'left'}
                 open={state['left']}
@@ -136,19 +159,24 @@ const Header = () => {
 
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {navItems.map((item) => (
-                <Link
+                <Link className='nav-links'
                   to={item[1]}
                   key={item}
                   style={{
-                    color: "#fff",
-
+                    color: "#000",
+                    marginTop: 30,
+                    // paddingLeft: 50,
                     marginLeft: 50,
-                    py: 4,
+                    // paddingTop:20,
+
                     textDecoration: "none",
                     verticalAlign: "bottom",
+
                   }}
                 >
-                  {item[0]}
+                  <Typography>
+                    {item[0]}
+                  </Typography>
                 </Link>
               ))}
             </Box>
