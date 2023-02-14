@@ -5,7 +5,6 @@ import Events from './Events'
 const Body = () => {
   return (
     <>
-    
     <Container >
       <Events/>
       <AboutUs/>

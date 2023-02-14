@@ -27,7 +27,7 @@ const navItems = [
   ["About Us", "/about"],
   ["People", "/people"],
   ["Research", "/research"],
-  ["Academics", "/academics"],
+  ["Labs*", "/labs"],
 ];
 
 
@@ -103,9 +103,9 @@ const Header = () => {
       <AppBar position="static" color="secondary" >
 
         <Container maxWidth="xl" disableGutters={useMediaQuery(theme.breakpoints.only('xs'))}>
-        <Box className='logo-div' sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', px: 3 , py:1, mx:'auto'}}>
+        <Box className='logo-div' sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', px: 1 }}>
           <Box>
-            <img className='logo-img-mobile' src='logo.png' alt='logo_image'  />
+            <img className='logo-img' src='logo.png' alt='logo_image' />
           </Box>
           <Box >
             <Typography >
@@ -157,7 +157,7 @@ const Header = () => {
 
             </Box>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent:'end' }}>
               {navItems.map((item) => (
                 <Link className='nav-links'
                   to={item[1]}
