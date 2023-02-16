@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Ubuntu', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* ////////////////////////Header///////////////// */
+.logo-div {}
+
+.logo-img {
+  width: 75px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.nav-links {
+  padding: 7px 7px 7px 7px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-links:hover {
+  background-color: #9d04565e;
+  border-radius: 10px;
+  box-shadow: 2px 3px 3px 2px #ae6f915f;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+/* ////////////////////////Carousel/////////////////////////// */
+.carousel-text {
+  position: absolute;
+  top: 200px;
+  margin: auto;
+  text-shadow: 4px 4px 5px #000000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cornerspacing {
+  width: 90%;
+  padding: 50px;
+  margin: 50px;
+  background: rgb(255, 255, 255);
+  background-clip: content-box;
+  border: 1px #9d0455 solid;
+
+  clip-path: polygon(0 20%, 10px 20%, 10px 10px, 15% 10px, 15% 0, 
+     85% 0, 85% 10px, calc(100% - 10px) 10px, calc(100% - 10px) 20%, 100% 20%, 
+     100% 80%, calc(100% - 10px) 80%, calc(100% - 10px) calc(100% - 10px), 
+     85% calc(100% - 10px), 85% 100%, 15% 100%, 15% calc(100% - 10px), 
+     10px calc(100% - 10px), 10px 85%, 0 85%);
+
+  -webkit-clip-path: polygon(0 20%, 10px 20%, 10px 10px, 15% 10px, 15% 0, 85% 0, 
+     85% 10px, -webkit-calc(100% - 10px) 10px, -webkit-calc(100% - 10px) 20%, 
+     100% 20%, 100% 80%, -webkit-calc(100% - 10px) 80%, 
+     -webkit-calc(100% - 10px) -webkit-calc(100% - 10px), 
+     85% -webkit-calc(100% - 10px), 85% 100%, 15% 100%, 15% 
+     -webkit-calc(100% - 10px), 10px -webkit-calc(100% - 10px), 10px 85%, 0 85%);
+
 }
+
+
