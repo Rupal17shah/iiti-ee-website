@@ -9,9 +9,13 @@ const ResearchAreas = (props) => {
     <>
 
       <Box className='cornerspacing'>
-
-        <Typography variant="h3" color="primary" textAlign='center'>Research Areas</Typography>
-        <Typography variant='h5' color='teritiary' textAlign='center'>Department of Electricl Engineering</Typography>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 50 }}>
+          <Typography variant="h3" color="primary" textAlign='center'>Research Areas</Typography>
+        </motion.div>
+        <Typography variant='h5' color='teritiary' textAlign='center'>Department of Electrical Engineering</Typography>
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
             <hr />
@@ -24,11 +28,11 @@ const ResearchAreas = (props) => {
           {/* {console.log(props.researchDATA.Title1)} */}
           {props.researchDATA.Title1}
         </Typography>
-        <Box sx={{py:5, px:5}}>
-          <Typography variant='h5' sx={{textDecoration: 'underline'}} >
+        <Box sx={{ py: 5, px: 5 }}>
+          <Typography variant='h5' sx={{ textDecoration: 'underline' }} >
             {props.researchDATA.info1.Heading5}
           </Typography>
-          <Box sx={{ px: 2 , py:2}}>
+          <Box sx={{ px: 2, py: 2 }}>
 
             <ul>
               <li><Typography variant='p' fontSize='1rem' fontWeight='2' >{props.researchDATA.info1.points.point1}</Typography></li>
@@ -43,11 +47,11 @@ const ResearchAreas = (props) => {
         </Box>
 
 
-        <Box sx={{py:5, px:5}}>
-          <Typography variant='h5' sx={{textDecoration: 'underline'}}  >
+        <Box sx={{ py: 5, px: 5 }}>
+          <Typography variant='h5' sx={{ textDecoration: 'underline' }}  >
             {props.researchDATA.info1.Heading5}
           </Typography>
-          <Box sx={{ px: 2 , py:2}}>
+          <Box sx={{ px: 2, py: 2 }}>
 
             <ul>
               <li><Typography variant='p' fontSize='1rem' fontWeight='2' >{props.researchDATA.info1.points.point1}</Typography></li>
@@ -62,11 +66,11 @@ const ResearchAreas = (props) => {
         </Box>
 
 
-        <Box sx={{py:5, px:5}}>
-          <Typography variant='h5' sx={{textDecoration: 'underline'}}  >
+        <Box sx={{ py: 5, px: 5 }}>
+          <Typography variant='h5' sx={{ textDecoration: 'underline' }}  >
             {props.researchDATA.info1.Heading5}
           </Typography>
-          <Box sx={{ px: 2 , py:2}}>
+          <Box sx={{ px: 2, py: 2 }}>
 
             <ul>
               <li><Typography variant='p' fontSize='1rem' fontWeight='2' >{props.researchDATA.info1.points.point1}</Typography></li>
@@ -79,7 +83,7 @@ const ResearchAreas = (props) => {
             </ul>
           </Box>
         </Box>
-        
+
 
 
 

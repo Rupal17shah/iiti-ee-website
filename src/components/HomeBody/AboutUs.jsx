@@ -10,7 +10,7 @@ export default function AboutUs() {
                 <motion.h1
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
                 >
                     <span className="capitalize text-4xl font-bold">
                         About Us
@@ -22,7 +22,7 @@ export default function AboutUs() {
                         className='w-full'
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, type: "spring", stiffness: 100 }}>
+                        transition={{ duration: 0.3, type: "spring", stiffness: 50 }}>
                         <Typography variant='p'>
                             Welcome to the website of the Department of Electrical Engineering, IIT Indore.<br />
 
