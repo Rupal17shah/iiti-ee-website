@@ -1,4 +1,4 @@
-import { Box } from '@mui/system'
+import { Container } from '@mui/material'
 import React from 'react'
 import AboutUs from './AboutUs'
 import { motion } from "framer-motion";
