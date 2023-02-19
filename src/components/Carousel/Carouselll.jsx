@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 
@@ -42,10 +40,10 @@ function Example(props) {
 
 function Item(props) {
     return (
-        <Box >
+      <>
+        {/* <Box > */}
 
-
-            {/* <ImageList sx={{ width: '100%', height: 500 }} cols={1} rowHeight={1}>
+        {/* <ImageList sx={{ width: '100%', height: 500 }} cols={1} rowHeight={1}>
                 
                     <ImageListItem >
                         <img
@@ -57,8 +55,14 @@ function Item(props) {
                     </ImageListItem>
                 
             </ImageList> */}
-            <img className='carousel-bg' src={props.item.img_url} alt='carr'  width='100%' height='600px'/>
-            {/* <div className='carousel-text'>
+        <img
+          className="carousel-bg"
+          src={props.item.img_url}
+          alt="carr"
+          width="100%"
+          height="650px"
+        />
+        {/* <div className='carousel-text'>
 
                 <h2>{props.item.name}</h2>
                 <p>{props.item.description}</p>
@@ -67,8 +71,9 @@ function Item(props) {
                     Check it out!
                 </Button>
             </div> */}
-        </Box>
-    )
+        {/* </Box> */}
+      </>
+    );
 }
 
 export default Example
