@@ -1,13 +1,12 @@
 import { Container } from '@mui/material'
 import React from 'react'
-import { Box } from '@mui/system'
 import AboutUs from './AboutUs'
 import { motion } from "framer-motion";
 import Events from './Events'
 const Body = () => {
   return (
     <>
-      <Box sx={{ px: 10 }}>
+      <Container>
         <motion.div
           className="w-full"
           initial={{ opacity: 0, y: 100 }}
@@ -17,11 +16,9 @@ const Body = () => {
           <Events />
         </motion.div>
         <AboutUs />
-      </Box>
-
-
+      </Container>
     </>
-  )
+  );
 }
 
 export default Body

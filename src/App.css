@@ -1,8 +1,16 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* color: #000000; */
+  font-family: 'Ubuntu', sans-serif;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+}
 
+* {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
@@ -14,20 +22,26 @@
 
 /* ////////////////////////Header///////////////// */
 
-.logo-img {
-  width: 75px;
-}
 
 
 .nav-links {
   padding: 7px 7px 7px 7px;
+}
 
+/* ////////////////////////Header///////////////// */
+
+.logo-img {
+  width: 75px;
 }
 
 .nav-links:hover {
   background-color: #9d04565e;
   border-radius: 10px;
   box-shadow: 2px 3px 3px 2px #ae6f915f;
+}
+
+.nav-links {
+  padding: 7px 7px 7px 7px;
 
 }
 
@@ -39,8 +53,21 @@
   margin: auto;
   text-shadow: 4px 4px 5px #000000;
 }
+.nav-links:hover {
+  background-color: #9d04565e;
+  border-radius: 10px;
+  box-shadow: 2px 3px 3px 2px #ae6f915f;
 
-.cornerspacing {
+}
+
+/* ////////////////////////Carousel/////////////////////////// */
+.carousel-text {
+  position: absolute;
+  top: 200px;
+  margin: auto;
+  text-shadow: 4px 4px 5px #000000;
+}
+/* .cornerspacing {
   width: 90%;
   padding: 50px;
   margin: 50px;
@@ -63,4 +90,4 @@
 
 }
 
-
+ */

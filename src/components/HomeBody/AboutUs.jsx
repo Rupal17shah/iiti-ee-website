@@ -17,7 +17,7 @@ export default function AboutUs() {
                     </span>
                 </motion.h1>
 
-                <Box sx={{ py: 7 }}>
+                <Box sx={{ py: 3 }}>
                     <motion.div
                         className='w-full'
                         initial={{ opacity: 0, x: -100 }}

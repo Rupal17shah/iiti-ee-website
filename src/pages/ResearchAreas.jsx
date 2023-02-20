@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 const ResearchAreas = (props) => {
   return (
     <>
-      {/* <Box className='cornerspacing'> */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -21,8 +20,6 @@ const ResearchAreas = (props) => {
       <Typography variant="h5" color="teritiary" textAlign="center">
         Department of Electrical Engineering
       </Typography>
-      {/* <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}> */}
       <hr />
       {/* </Box>
           <Box sx={{ borderTop: "7px solid black", px: 4 }}> */}

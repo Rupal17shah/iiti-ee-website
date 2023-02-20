@@ -64,12 +64,17 @@ export default function Events() {
                 </>
               )}
             </Grid>
-            <Typography variant="h4" my={3}>Events</Typography>
+            <br />
+            <br/>
+            <span className="capitalize text-4xl font-bold">Events</span>
+            <br />
+            <br/>
             <Grid
               container
               justifyContent={{ xs: "center", sm: "left" }}
               direction="row"
               alignItems="center"
+              sx={{marginTop:"20px"}}
               spacing={{ xs: 2, md: 4, sm: 6, lg: 8 }}
             >
               <Grid item xs={10} sm={8} md={6} lg={4}>
