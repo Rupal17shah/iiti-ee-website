@@ -16,19 +16,25 @@ import ListItemButton from '@mui/material/ListItemButton';
 
 
 
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+
+
 
 const navItems = [
   ["Home", "/"],
   ["About Us", "/about"],
   ["People", "/people"],
-  ["Research", "/research"],
-  ["Academics", "/academics"],
+  ["Research*", "/research"],
+  ["Labs*", "/labs"],
 ];
 
 
 
 
 const Header = () => {
+  const theme = useTheme();
 
 
   const [state, setState] = React.useState({
@@ -92,65 +98,85 @@ const Header = () => {
   return (
 
     <>
-      <Box className='logo-div' sx={{ display: 'flex', alignContent: 'center', px: 7, py: 1 }}>
-        <img className='logo-img' src='logo.png' alt='logo_image' />
-        <Box sx={{ my: 'auto' }}>
-          <Typography>
-            DEPARTMENT OF ELECTRICAL ENGINEERING
-          </Typography>
-          <Typography>
-            INDIAN INSTITUTE OF TECHNOLOGY INDORE
-          </Typography>
+      <AppBar position='static' >
 
+        <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', px: 1, py: 1}}>
+          <Box>
+            <img src='logo.png' alt='logo_image' width='50' />
+          </Box>
+          <Box sx={{px:1}} >
+            <Typography fontSize='0.7rem' color='white' >
+              Department Of Electical Engineering<br/>
+              Indian Institute Of Technology
+            </Typography>
+          </Box>
+          <IconButton
+            onClick={toggleDrawer('left', true)}
+            sx={{ ml: 'auto' }}
+          >
+            <MenuIcon />
+          </IconButton>
         </Box>
-      </Box>
-      <AppBar position="static" color="primary" >
-        <Container maxWidth="xl">
-          <Toolbar disableGutters>
+      </AppBar>
+      <AppBar position="static" color="secondary" sx={{ display: { xs: 'none', md: 'flex' } }}>
+
+        <Container maxWidth="xl" disableGutters={useMediaQuery(theme.breakpoints.only('xs'))}>
 
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+        <Toolbar disableGutters>
+          <Box className='logo-div' sx={{ display: { xs: 'none', md: 'flex' }, alignContent: 'center', px: 7, py: 1 }}>
+            <img src='logo.png' alt='logo_image' width='80' />
+            <Box sx={{ my: 'auto', px: 2 }}>
+              <Typography fontSize='1.2rem' fontWeight='bold'>
+                DEPARTMENT OF ELECTRICAL ENGINEERING<br />
 
-
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={toggleDrawer('left', true)}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Drawer
-                anchor={'left'}
-                open={state['left']}
-                onClose={toggleDrawer('left', false)}
-              >
-                {list('left')}
-              </Drawer>
+                INDIAN INSTITUTE OF TECHNOLOGY INDORE
+              </Typography>
 
             </Box>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {navItems.map((item) => (
-                <Link
-                  to={item[1]}
-                  key={item}
-                  style={{
-                    color: "#fff",
+          </Box>
 
-                    paddingLeft: 50,
-                    py: 4,
-                    textDecoration: "none",
-                    verticalAlign: "bottom",
-                  }}
-                >
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', backgroundColor: '#9d0455', width: '100%' } }}>
+
+
+
+
+
+            <Drawer
+              anchor={'left'}
+              open={state['left']}
+              onClose={toggleDrawer('left', false)}
+            >
+              {list('left')}
+            </Drawer>
+
+          </Box>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'end' }}>
+            {navItems.map((item) => (
+              <Link className='nav-links'
+                to={item[1]}
+                key={item}
+                style={{
+                  color: "#000",
+                  marginTop: 30,
+                  // paddingLeft: 50,
+                  marginLeft: 50,
+                  // paddingTop:20,
+
+                  textDecoration: "none",
+                  verticalAlign: "bottom",
+
+                }}
+              >
+                <Typography>
                   {item[0]}
-                </Link>
-              ))}
-            </Box>
-          </Toolbar>
+                </Typography>
+              </Link>
+            ))}
+          </Box>
+        </Toolbar>
         </Container>
       </AppBar>
     </>
