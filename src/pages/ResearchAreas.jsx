@@ -8,11 +8,15 @@ const ResearchAreas = (props) => {
   return (
     <>
 
-      {/* <Box className='cornerspacing'> */}
-
-        <Typography variant="h3" color="primary" textAlign='center'>Research Areas</Typography>
-        <Typography variant='h5' color='teritiary' textAlign='center'>Department of Electricl Engineering</Typography>
-        {/* <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Box className='cornerspacing'>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 50 }}>
+          <Typography variant="h3" color="primary" textAlign='center'>Research Areas</Typography>
+        </motion.div>
+        <Typography variant='h5' color='teritiary' textAlign='center'>Department of Electrical Engineering</Typography>
+        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
           <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
             <hr />
           </Box>

@@ -1,14 +1,23 @@
 import { Container } from '@mui/material'
 import React from 'react'
+import { Box } from '@mui/system'
 import AboutUs from './AboutUs'
+import { motion } from "framer-motion";
 import Events from './Events'
 const Body = () => {
   return (
     <>
-    <Container >
-      <Events/>
-      <AboutUs/>
-    </Container>
+      <Box sx={{ px: 10 }}>
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
+        >
+          <Events />
+        </motion.div>
+        <AboutUs />
+      </Box>
 
 
     </>
