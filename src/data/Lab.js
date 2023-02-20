@@ -1,4 +1,4 @@
-const laboratoryDATA =
+const Lab =
 {
     mainHeading: 'Major Laboratories',
     body: [
@@ -26,4 +26,4 @@ const laboratoryDATA =
 
 }
 
-export default laboratoryDATA;
+export default Lab;

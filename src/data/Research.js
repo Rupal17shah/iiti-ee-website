@@ -1,4 +1,4 @@
-const researchDATA =
+const Research =
 {
     mainHeading: 'Research-Areas',
     body: [{
@@ -43,7 +43,7 @@ const researchDATA =
 
 }
 
-export default researchDATA;
+export default Research;
 
 
 

@@ -1,12 +1,12 @@
 import React from 'react'
 import Body from '../components/HomeBody/Body'
-import Carouselll from '../components/Carousel/Carouselll'
+import Carousel from '../components/Carousel'
 
 
 const HomePage = () => {
   return (
     <>
-        <Carouselll />
+        <Carousel/>
         <Body/>
     </>
   )

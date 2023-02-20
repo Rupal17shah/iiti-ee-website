@@ -1,15 +1,16 @@
 import './App.css';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import theme from "./Theme";
+import Footer from './components/Footer';
+import Header from './components/Header';
+import HomePage from "./pages/HomePage";
+import AboutUsPage from "./pages/AboutUsPage";
+import NotFoundPage from "./pages/NotFoundPage";
+import Research from "./data/Research";
+import Lab from "./data/Lab";
+import Template from "./components/Template";
 import { ThemeProvider } from '@mui/material/styles';
-import theme from './Theme';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import AboutUsPage from './pages/AboutUsPage';
-import NotFoundPage from './pages/NotFoundPage';
-import researchDATA from './DATA/researchDATA';
-import laboratoryDATA from './DATA/laboratoryDATA';
-import CommonTamplate from './components/CommonTamplate';
+
 
 function App() {
   return (
@@ -20,8 +21,8 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutUsPage/>} />
-            <Route path='/research' element={<CommonTamplate Data={researchDATA} />} />
-            <Route path='/labs' element={<CommonTamplate Data={laboratoryDATA}/>} />
+            <Route path='/research' element={<Template Data={Research} />} />
+            <Route path='/labs' element={<Template Data={Lab}/>} />
             <Route path='*' element={<NotFoundPage/>}/>
           </Routes>
           <Footer />

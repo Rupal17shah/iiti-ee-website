@@ -78,15 +78,6 @@ export default function Events() {
               <Grid item xs={10} sm={8} md={6} lg={4}>
                 <Event />
               </Grid>
-              <Grid item xs={10} sm={8} md={6} lg={4}>
-                <Event />
-              </Grid>
-              <Grid item xs={10} sm={8} md={6} lg={4}>
-                <Event />
-              </Grid>
-              <Grid item xs={10} sm={8} md={6} lg={4}>
-                <Event />
-              </Grid>
             </Grid>
           </div>
         </Box>
