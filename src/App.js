@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import NotFoundPage from './pages/NotFoundPage';
-
-////data
 import researchDATA from './DATA/researchDATA';
 import laboratoryDATA from './DATA/laboratoryDATA';
 import CommonTamplate from './components/CommonTamplate';
