@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import NotFoundPage from './pages/NotFoundPage';
+import Gallery from './pages/Gallery';
 
 ////data
 import researchDATA from './DATA/researchDATA';
@@ -22,9 +23,11 @@ function App() {
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutUsPage/>} />
+            <Route path='/Gallery' element={<Gallery/>}/>
             <Route path='/research' element={<CommonTamplate Data={researchDATA} />} />
             <Route path='/labs' element={<CommonTamplate Data={laboratoryDATA}/>} />
             <Route path='*' element={<NotFoundPage/>}/>
+  
           </Routes>
           <Footer />
         </ThemeProvider>

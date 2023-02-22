@@ -25,9 +25,11 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 const navItems = [
   ["Home", "/"],
   ["About Us", "/about"],
+  ["Gallery", "/Gallery"],
   ["People", "/people"],
   ["Research", "/research"],
   ["Labs*", "/labs"],
+  
 ];
 
 
