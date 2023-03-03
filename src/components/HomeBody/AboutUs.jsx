@@ -13,7 +13,7 @@ export default function AboutUs() {
                     transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
                 >
                     <span className="capitalize text-4xl font-bold">
-                        About Us
+                        About-Us
                     </span>
                 </motion.h1>
 
