@@ -35,9 +35,11 @@
 }
 
 .nav-links:hover {
-  background-color: #9d04565e;
-  border-radius: 10px;
-  box-shadow: 2px 3px 3px 2px #ae6f915f;
+  /* background-color: #9d04565e; */
+  /* border-radius: 10px; */
+  /* box-shadow: 2px 3px 3px 2px #ae6f915f; */
+  font-weight: 700;
+  color: #9d0455;
 }
 
 .nav-links {
@@ -53,12 +55,7 @@
   margin: auto;
   text-shadow: 4px 4px 5px #000000;
 }
-.nav-links:hover {
-  background-color: #9d04565e;
-  border-radius: 10px;
-  box-shadow: 2px 3px 3px 2px #ae6f915f;
 
-}
 
 /* ////////////////////////Carousel/////////////////////////// */
 .carousel-text {

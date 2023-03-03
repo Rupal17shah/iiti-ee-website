@@ -121,6 +121,7 @@ const Header = () => {
               className="logo-div"
               sx={{
                 display: { xs: "none", md: "flex" },
+           
                 alignContent: "center",
                 px: 7,
                 py: 1,
@@ -162,7 +163,9 @@ const Header = () => {
               sx={{
                 flexGrow: 1,
                 display: { xs: "none", md: "flex" },
-                justifyContent: "end",
+                justifyContent: "space-around",
+                // maxWidth:'40%'
+                paddingLeft:'5%'
               }}
             >
               {navItems.map((item) => (
@@ -172,13 +175,13 @@ const Header = () => {
                   key={item}
                   style={{
                     color: "#000",
-                    marginTop: 30,
-                    marginLeft: 50,
+                    marginTop: 20,
+                    marginLeft: 0,
                     textDecoration: "none",
                     verticalAlign: "bottom",
                   }}
                 >
-                  <Typography>{item[0]}</Typography>
+                  <Typography className="nav-links">{item[0]}</Typography>
                 </Link>
               ))}
             </Box>
