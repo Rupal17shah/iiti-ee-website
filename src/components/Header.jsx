@@ -95,7 +95,7 @@ const Header = () => {
               <br />
             </Typography>
             <Typography fontSize="0.5rem" color="white">
-              Indian Institute Of Technology
+              Indian Institute Of Technology Indore
             </Typography>
           </Box>
           <IconButton
@@ -133,7 +133,7 @@ const Header = () => {
                   <br />
                 </Typography>
                 <Typography fontSize="1.0rem" fontWeight={600 }>
-                  INDIAN INSTITUTE OF TECHNOLOGY
+                  INDIAN INSTITUTE OF TECHNOLOGY INDORE
                 </Typography>
               </Box>
             </Box>

@@ -7,11 +7,12 @@ export default function Template(props) {
     <div>
       <Container sx={{ py: 2 }}>
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
+          viewport={{ once: true }}
         >
-          <Typography variant="h3" color="primary" textAlign="center">
+          <Typography variant="h4" color="primary" textAlign="center">
             {props.Data.mainHeading}
           </Typography>
           <Typography variant="h5" color="teritiary" textAlign="center">
@@ -20,18 +21,18 @@ export default function Template(props) {
         </motion.div>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
           >
             <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
               <hr />
             </Box>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
           >
             <Box sx={{ borderTop: "7px solid black", px: 4 }}>
               <hr />
@@ -40,11 +41,11 @@ export default function Template(props) {
         </Box>
         {props.Data.body.map((key) => (
           <>
-            <Card sx={{ my: 3 }}>
+            {/* <Card sx={{ my: 3 }}> */}
               <motion.div
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+                transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
               >
                 <Typography variant="h5" color="primary" textAlign="center">
                   {key.subHeading}
@@ -53,16 +54,16 @@ export default function Template(props) {
 
               {key.subbody.map((innerkey) => (
                 <>
-                  <motion.div
-                    initial={{ opacity: 0, y: 100 }}
+                  {/* <motion.div
+                    initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{
                       duration: 0.3,
                       type: "spring",
-                      stiffness: 100,
-                    }}
-                  >
-                    <Box sx={{ py: 2, px: 5 }}>
+                      stiffness: 50,
+                    }} */}
+                  {/* > */}
+                    <Box sx={{ py: 3, px: 5 }}>
                       <Typography
                         variant="h5"
                         sx={{ textDecoration: "underline" }}
@@ -85,10 +86,10 @@ export default function Template(props) {
                         ))}
                       </Box>
                     </Box>
-                  </motion.div>
+                  {/* </motion.div> */}
                 </>
               ))}
-            </Card>
+            {/* </Card> */}
           </>
         ))}
       </Container>

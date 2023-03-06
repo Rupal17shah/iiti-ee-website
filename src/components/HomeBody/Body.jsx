@@ -4,7 +4,7 @@ import AboutUs from './AboutUs'
 import { motion } from "framer-motion";
 import Events from './Events'
 const Body = () => {
-  return (
+  return (  
     <>
       <Container>
         <motion.div
@@ -13,7 +13,7 @@ const Body = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
         >
-          <Events />
+          <Events/>
         </motion.div>
         <AboutUs />
       </Container>

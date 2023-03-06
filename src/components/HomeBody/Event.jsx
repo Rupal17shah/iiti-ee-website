@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid } from '@mui/material';
 
-export default function Event() {
+export default function Event(props) {
   return (
     <div>
       <Card
@@ -35,7 +35,7 @@ export default function Event() {
                   fontSize: "32px",
                 }}
               >
-                20
+                {props.date}
               </Typography>
             </Grid>
             <Grid item>
@@ -54,7 +54,7 @@ export default function Event() {
                       fontSize: "18px",
                     }}
                   >
-                    Jan
+                    {props.month}
                   </Typography>
                 </Grid>
                 <Grid item>
@@ -65,7 +65,7 @@ export default function Event() {
                       fontSize: "9px",
                     }}
                   >
-                    Friday, 11:00 AM
+                    {props.day}, {props.time}
                   </Typography>
                 </Grid>
               </Grid>
@@ -87,7 +87,7 @@ export default function Event() {
                   fontSize: "9px",
                 }}
               >
-                Event Name
+                {props.title}
               </Typography>
             </Grid>
             <Grid item>
@@ -98,7 +98,7 @@ export default function Event() {
                   fontSize: "9px",
                 }}
               >
-                Event Description
+               {props.description}
               </Typography>
             </Grid>
           </Grid>

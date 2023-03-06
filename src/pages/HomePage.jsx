@@ -1,15 +1,15 @@
-import React from 'react'
-import Body from '../components/HomeBody/Body'
-import Carousel from '../components/Carousel'
+import React from "react";
+import Body from "../components/HomeBody/Body";
+import Carousel from "../components/Carousel";
 
 
 const HomePage = () => {
   return (
     <>
-        <Carousel/>
-        <Body/>
+      <Carousel />
+      <Body/>
     </>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
