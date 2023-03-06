@@ -16,6 +16,7 @@ import Lab from "./data/Lab";
 import AboutUs from "./data/AboutUs"
 import ContactUs from './data/ContactUs';
 import Gallery from './pages/Gallery';
+import LabPage from './pages/LabPage';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<Template Data={AboutUs} />} />
             <Route path="/research" element={<Research />} />
-            <Route path="/labs" element={<Template Data={Lab} />} />
+            <Route path="/labs" element={<LabPage />} />
             <Route path="/people" element={<PeoplePage />} />
             <Route path="/signals" element={<Domain />} />
             <Route path="/vlsi" element={<Domain />} />

@@ -55,7 +55,6 @@ export default function PeoplePage() {
               </Box>
             </motion.div>
           </Box>
-          
         </Container>
       </div>
     </div>
