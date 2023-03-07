@@ -13,7 +13,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import Logo from "./white-logo.png";
+import Logo from "./logo.png";
 const navItems = [
   ["Home", "/"],
   ["About Us", "/about"],
@@ -87,7 +87,7 @@ const Header = () => {
           }}
         >
           <Box>
-            <img src="Images/white-logo.png" alt="logo_image" width="50" />
+            <img src={Logo} alt="logo_image" width="50" />
           </Box>
           <Box sx={{ px: 1 }}>
             <Typography fontSize="0.7rem" color="white">
@@ -126,7 +126,7 @@ const Header = () => {
                 py: 1,
               }}
             >
-              <img src="Images/logo.png" alt="logo_image" width="80" />
+              <img src={Logo} alt="logo_image" width="80" />
               <Box sx={{ my: "auto", px: 2 }}>
                 <Typography fontSize="1.2rem" fontWeight="bold">
                   DEPARTMENT OF ELECTRICAL ENGINEERING
