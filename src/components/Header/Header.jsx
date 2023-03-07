@@ -13,7 +13,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
+import Logo from "./white-logo.png";
 const navItems = [
   ["Home", "/"],
   ["About Us", "/about"],

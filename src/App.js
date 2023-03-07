@@ -1,10 +1,13 @@
 import './App.css';
 import theme from "./Theme";
 import Footer from './components/Footer';
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import HomePage from "./pages/HomePage";
 import Template from "./components/Template";
 import PeoplePage from "./pages/PeoplePage";
+import Courses from "./pages/Courses";
+import BTech_Courses from "./pages/BTech_Courses";
+import MTech_Courses from "./pages/MTech_Courses";
 import Research from "./pages/ResearchPage";
 import Domain from './components/ResearchBody/Domain';
 import AdministrationPage from './pages/AdministrationPage';
@@ -29,6 +32,9 @@ function App() {
             <Route path="/research" element={<Research />} />
             <Route path="/labs" element={<Template Data={Lab} />} />
             <Route path="/people" element={<PeoplePage />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/btech" element={<BTech_Courses />} />
+            <Route path="/courses/mtech" element={<MTech_Courses />} />
             <Route path="/signals" element={<Domain />} />
             <Route path="/vlsi" element={<Domain />} />
             <Route path="/power" element={<Domain />} />
