@@ -3,6 +3,7 @@ import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import axios from 'axios';
 import { useState, useEffect} from 'react';
+import { Grid } from '@mui/material';
 
 import Cards from '../components/ResearchBody/Cards';
 
