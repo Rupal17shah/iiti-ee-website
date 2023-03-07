@@ -1,11 +1,14 @@
 
-import React from "react"
+import React from "react";
+
 import { ReactPhotoCollage } from "react-photo-collage";
 import { Typography, Box, Container, Grid } from "@mui/material";
 import { motion } from "framer-motion";
+import LazyLoad from "react-lazyload";
 
 class Gallery extends React.Component {
   state = {
+
     innerWidth: window.innerWidth
   }
 
@@ -22,6 +25,7 @@ class Gallery extends React.Component {
     return [1, 3, 2, 3, 2, 3, 2]
   }
   render() {
+
 
     const setting = {
       width: this.state.innerWidth - 100,
@@ -121,6 +125,9 @@ class Gallery extends React.Component {
           <br />
 
           <ReactPhotoCollage {...setting} />
+          <LazyLoad height={200}>
+            <ReactPhotoCollage {...setting} />
+          </LazyLoad>
         </Container>
       </>
     );
