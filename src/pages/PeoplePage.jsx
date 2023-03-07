@@ -3,6 +3,9 @@ import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
 import axios from 'axios';
 import { useState, useEffect} from 'react';
+
+import Cards from '../components/ResearchBody/Cards';
+
 export default function PeoplePage() {
   const [people, setPeople] = useState([]);
   const [isError, setIsError] = useState([]);
@@ -52,7 +55,56 @@ export default function PeoplePage() {
               </Box>
             </motion.div>
           </Box>
-          
+          <Grid
+            container
+            justifyContent="space-around"
+            direction="row"
+            alignItems="top"
+            spacing={2}
+          >
+            <Grid item>
+              <Cards
+                specialisation={"Staff"}
+                action={"/signals"}
+                photo={"Images/logo/signal.jpg"}
+              />
+            </Grid>
+            <Grid item>
+              <Cards
+                specialisation={"BTech"}
+                action={"/vlsi"}
+                photo={"Images/logo/VLSI.jpg"}
+              />
+            </Grid>
+            <Grid item>
+              <Cards
+                specialisation={"Faculty"}
+                action={"/vlsi"}
+                photo={"Images/logo/VLSI.jpg"}
+              />
+            </Grid>
+            <Grid item>
+              <Cards
+                specialisation={"Phd"}
+                action={"/vlsi"}
+                photo={"Images/logo/VLSI.jpg"}
+              />
+            </Grid>
+            <Grid item>
+              <Cards
+                specialisation={"MTech"}
+                action={"/vlsi"}
+                photo={"Images/logo/VLSI.jpg"}
+              />
+            </Grid>
+            <Grid item>
+              <Cards
+                specialisation={"Alumni"}
+                action={"/vlsi"}
+                photo={"Images/logo/VLSI.jpg"}
+              />
+            </Grid>
+          </Grid>
         </Container>
       </div>
     </div>
