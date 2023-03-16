@@ -7,6 +7,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Cards from "../components/ResearchBody/Cards";
+import Staff_Card from "../components/ResearchBody/Staff_Card";
 
 export default function CoursePage() {
   return (
@@ -43,9 +44,9 @@ export default function CoursePage() {
               <hr />
             </Box>
           </motion.div>
-              </Box>
-              
-              <Grid
+        </Box>
+
+        <Grid
           container
           justifyContent="space-around"
           direction="row"
@@ -65,8 +66,31 @@ export default function CoursePage() {
               action={"/mtech"}
               photo={"Images/logo/VLSI.jpg"}
             />
-                  </Grid>
-                  </Grid>
+          </Grid>
+          <Grid
+          container
+          justifyContent={"space-around"}
+          direction={"column"}
+          spacing={6}
+          sx={{ pt: 4 }}>
+
+            <Grid item>
+              <Staff_Card
+                specialisation={"MTech"}
+                name={"Vijay"}
+                action={"/mtech"}
+                photo={"Images/logo/VLSI.jpg"}
+                research1={"Microgrids and Distributed generation"}
+                research2={"Microgrids and Distributed generation"}
+                research3={"Microgrids and Distributed generation"}
+                research4={"Microgrids and Distributed generation"}
+                email={"vijay_as@iiti.ac.in"}
+                ph={"1234-1234-123"}
+                address={"POD silicon"}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
       </Container>
     </div>
   );
