@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Cards from "../components/ResearchBody/Cards";
 import Staff_Card from "../components/ResearchBody/Staff_Card";
+import PHD_Card from "../components/ResearchBody/PHD_Card";
 
 export default function CoursePage() {
   return (
@@ -87,6 +88,16 @@ export default function CoursePage() {
                 email={"vijay_as@iiti.ac.in"}
                 ph={"1234-1234-123"}
                 address={"POD silicon"}
+              />
+            </Grid>
+            <Grid item>
+              <PHD_Card
+                specialisation={"MTech"}
+                name={"Vijay"}
+                action={"/mtech"}
+                photo={"Images/logo/VLSI.jpg"}
+                topic={"Speech signal analysis on non-stationary signals models"}
+                email={"vijay_as@iiti.ac.in"}
               />
             </Grid>
           </Grid>
