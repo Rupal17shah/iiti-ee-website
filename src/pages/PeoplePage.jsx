@@ -65,42 +65,41 @@ export default function PeoplePage() {
               <Cards
                 specialisation={"Staff"}
                 action={"/signals"}
-                photo={"Images/logo/signal.jpg"}
-              />
+                        />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"BTech"}
                 action={"/vlsi"}
-                photo={"Images/logo/VLSI.jpg"}
+                // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"Faculty"}
                 action={"/vlsi"}
-                photo={"Images/logo/VLSI.jpg"}
+                // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"Phd"}
                 action={"/vlsi"}
-                photo={"Images/logo/VLSI.jpg"}
+                // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"MTech"}
                 action={"/vlsi"}
-                photo={"Images/logo/VLSI.jpg"}
+                // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"Alumni"}
                 action={"/vlsi"}
-                photo={"Images/logo/VLSI.jpg"}
+                // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
           </Grid>

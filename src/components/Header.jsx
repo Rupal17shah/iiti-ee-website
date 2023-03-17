@@ -13,17 +13,41 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { Button, Menu, MenuItem } from "@mui/material";
 
-const navItems = [
-  ["Home", "/"],
-  ["About Us", "/about"],
-  ["People", "/people"],
-  ["Research", "/research"],
-  ["Labs", "/labs"],
-];
+import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
+
+import ListSubheader from "@mui/material/ListSubheader";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+import DraftsIcon from "@mui/icons-material/Drafts";
+import SendIcon from "@mui/icons-material/Send";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import StarBorder from "@mui/icons-material/StarBorder";
+import { HomeRepairServiceOutlined } from "@mui/icons-material";
 
 const Header = () => {
   const theme = useTheme();
+  const [open1, setOpen1] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
+  const [open4, setOpen4] = React.useState(false);
+
+  const handleClick1 = () => {
+    setOpen1(!open1);
+  };
+  const handleClick2 = () => {
+    setOpen2(!open2);
+  };
+  const handleClick3 = () => {
+    setOpen3(!open3);
+  };
+  const handleClick4 = () => {
+    setOpen4(!open4);
+  };
 
   const [state, setState] = React.useState({
     top: false,
@@ -45,32 +69,216 @@ const Header = () => {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{
+        width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+        display: "flex",
+        flexDirection: "column",
+      }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
+      // onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton>
-              <Link
-                to={item[1]}
-                key={item}
-                style={{
-                  color: "#000",
-                  fontSize: "1.1rem",
-                  fontWeight: "600",
-                  padding: "18px",
-                  textDecoration: "none",
-                  verticalAlign: "bottom",
-                }}
-              >
-                {item[0]}
+      <List
+        sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+        component="nav"
+        aria-labelledby="nested-list-subheader"
+        subheader={
+          <ListSubheader component="div" id="nested-list-subheader">
+            Department of Electrical
+          </ListSubheader>
+        }
+      >
+        <ListItemButton onClick={toggleDrawer(anchor, false)}>
+          <Link to="/">
+            <ListItemText primary="Home" />
+          </Link>
+        </ListItemButton>
+
+        <ListItemButton onClick={handleClick1}>
+          <ListItemText primary="About" />
+          {open1 ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={open1} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/about">
+                <ListItemText primary="Department" />
               </Link>
             </ListItemButton>
-          </ListItem>
-        ))}
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/admministration">
+                <ListItemText primary="Administration" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/contact">
+                <ListItemText primary="Contact Us" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/gallery">
+                <ListItemText primary="Gallery" />
+              </Link>
+            </ListItemButton>
+          </List>
+        </Collapse>
+
+        <ListItemButton onClick={handleClick2}>
+          <ListItemText primary="People" />
+          {open2 ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={open2} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/people">
+                <ListItemText primary="Factuly" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/people">
+                <ListItemText primary="Staff" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/">
+                <ListItemText primary="PhD Student" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/">
+                <ListItemText primary="Mtech Student" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/">
+                <ListItemText primary="Btech Student" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/">
+                <ListItemText primary="Alumni" />
+              </Link>
+            </ListItemButton>
+          </List>
+        </Collapse>
+
+        <ListItemButton onClick={handleClick3}>
+          <ListItemText primary="Research" />
+          {open3 ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={open3} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/research">
+                <ListItemText primary="Research Areas" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/labs">
+                <ListItemText primary="Laboratories" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/">
+                <ListItemText primary="Recent Publications" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/">
+                <ListItemText primary="Projects" />
+              </Link>
+            </ListItemButton>
+          </List>
+        </Collapse>
+
+        <ListItemButton onClick={handleClick4}>
+          <ListItemText primary="Academics" />
+          {open4 ? <ExpandLess /> : <ExpandMore />}
+        </ListItemButton>
+        <Collapse in={open4} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/about">
+                <ListItemText primary="Programs" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/admministration">
+                <ListItemText primary="Courses" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/contact">
+                <ListItemText primary="Scholarships" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link to="/gallery">
+                <ListItemText primary="Awards and Recognitions" />
+              </Link>
+            </ListItemButton>
+          </List>
+        </Collapse>
+
+        <ListItemButton onClick={toggleDrawer(anchor, false)}>
+          <Link to="/">
+            <ListItemText primary="Open Positions" />
+          </Link>
+        </ListItemButton>
       </List>
     </Box>
   );
@@ -87,7 +295,7 @@ const Header = () => {
           }}
         >
           <Box>
-            <img src="Images/white-logo.png" alt="logo_image" width="50" />
+            <img src="Images/white-logo.png" alt="loggg" width="50" />
           </Box>
           <Box sx={{ px: 1 }}>
             <Typography fontSize="0.7rem" color="white">
@@ -121,6 +329,7 @@ const Header = () => {
               className="logo-div"
               sx={{
                 display: { xs: "none", md: "flex" },
+
                 alignContent: "center",
                 px: 7,
                 py: 1,
@@ -132,7 +341,7 @@ const Header = () => {
                   DEPARTMENT OF ELECTRICAL ENGINEERING
                   <br />
                 </Typography>
-                <Typography fontSize="1.0rem" fontWeight={600 }>
+                <Typography fontSize="1.0rem" fontWeight={600}>
                   INDIAN INSTITUTE OF TECHNOLOGY INDORE
                 </Typography>
               </Box>
@@ -149,6 +358,9 @@ const Header = () => {
                 },
               }}
             >
+              {/* <Drawer>
+               
+              </Drawer> */}
               <Drawer
                 anchor={"left"}
                 open={state["left"]}
@@ -162,25 +374,123 @@ const Header = () => {
               sx={{
                 flexGrow: 1,
                 display: { xs: "none", md: "flex" },
-                justifyContent: "end",
+                justifyContent: "space-around",
+                // maxWidth:'40%'
+                paddingLeft: "5%",
               }}
             >
-              {navItems.map((item) => (
-                <Link
-                  className="nav-links"
-                  to={item[1]}
-                  key={item}
-                  style={{
-                    color: "#000",
-                    marginTop: 30,
-                    marginLeft: 50,
-                    textDecoration: "none",
-                    verticalAlign: "bottom",
-                  }}
-                >
-                  <Typography>{item[0]}</Typography>
-                </Link>
-              ))}
+              <PopupState popupId="demo-popup-menu">
+                {(popupState) => (
+                  <React.Fragment>
+                    <Button {...bindTrigger(popupState)}>
+                      <Link to="/">
+                        <Typography className="nav-links">Home</Typography>
+                      </Link>
+                    </Button>
+                  </React.Fragment>
+                )}
+              </PopupState>
+              <PopupState popupId="demo-popup-menu">
+                {(popupState) => (
+                  <React.Fragment>
+                    <Button {...bindTrigger(popupState)}>
+                      <Typography className="nav-links">About</Typography>
+                    </Button>
+                    <Menu {...bindMenu(popupState)}>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/about">Department</Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/administration">Administration</Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/contact">Contact Us</Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/gallery">Gallery</Link>
+                      </MenuItem>
+                    </Menu>
+                  </React.Fragment>
+                )}
+              </PopupState>
+              <PopupState popupId="demo-popup-menu">
+                {(popupState) => (
+                  <React.Fragment>
+                    <Button {...bindTrigger(popupState)}>
+                      <Typography className="nav-links">People</Typography>
+                    </Button>
+                    <Menu {...bindMenu(popupState)}>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/people">Faculty</Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>Staff</MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        PhD Student
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        M Tech Student
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        B Tech Student
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>Alumni</MenuItem>
+                    </Menu>
+                  </React.Fragment>
+                )}
+              </PopupState>
+              <PopupState popupId="demo-popup-menu">
+                {(popupState) => (
+                  <React.Fragment>
+                    <Button {...bindTrigger(popupState)}>
+                      <Typography className="nav-links">Research</Typography>
+                    </Button>
+                    <Menu {...bindMenu(popupState)}>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/research">Research Areas</Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/labs">Laboratories</Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/publication">Recent Publications</Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>Projects</MenuItem>
+                    </Menu>
+                  </React.Fragment>
+                )}
+              </PopupState>
+              <PopupState popupId="demo-popup-menu">
+                {(popupState) => (
+                  <React.Fragment>
+                    <Button {...bindTrigger(popupState)}>
+                      <Typography className="nav-links">Academics</Typography>
+                    </Button>
+                    <Menu {...bindMenu(popupState)}>
+                      <MenuItem onClick={popupState.close}>Programs</MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="/courses">Courses</Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        Scholarships Publications
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        Awards and Recognitions
+                      </MenuItem>
+                    </Menu>
+                  </React.Fragment>
+                )}
+              </PopupState>
+              <PopupState popupId="demo-popup-menu">
+                {(popupState) => (
+                  <React.Fragment>
+                    <Button {...bindTrigger(popupState)}>
+                      <Typography className="nav-links">
+                        Open Positions
+                      </Typography>
+                    </Button>
+                  </React.Fragment>
+                )}
+              </PopupState>
             </Box>
           </Toolbar>
         </Container>

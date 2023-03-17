@@ -27,7 +27,6 @@ export default function Cards(props) {
                 component="img"
                 height="140"
                 image={props.photo}
-                alt="green iguana"
               />
               <CardContent>
                 <Typography

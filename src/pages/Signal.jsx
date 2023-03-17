@@ -70,6 +70,7 @@ export default function Signal() {
                 <Typography variant="p">{item2.description} </Typography>
               </Container>
             </>
+
           ))}
 
           <br />

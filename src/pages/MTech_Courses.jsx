@@ -1,25 +1,7 @@
 import React from "react";
-import { Typography, Box, Container, Grid } from "@mui/material";
+import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
-import axios from "axios";
-import { useState, useEffect } from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-
-export default function Courses() {
-  const [people, setPeople] = useState([]);
-  const [isError, setIsError] = useState([]);
-  useEffect(() => {
-    axios
-      .get("http://127.0.0.1:8000/api/people/read")
-      .then((response) => setPeople(response.data))
-      .catch((error) => setIsError(error.message));
-    if (!isError) {
-      setPeople("Not Available");
-    }
-  }, []);
-  console.log(people);
+export default function MTech_Courses() {
   return (
     <div>
       <div>
@@ -62,26 +44,20 @@ export default function Courses() {
         </Container>
       </div>
       <div className="flex w-full items-center lg:items-start lg:justify-around flex-col lg:flex-row py-16">
-        <a href="/courses/btech">
+        <a href="/about">
           <div className="w-96 h-96 border-2 shadow-md flex flex-col">
             <div className="w-full h-3/4 border-b-2 shadow-md">
-              <img
-                src="./Images/BTech.jpg"
-                className="object-cover h-full mb-0"
-              ></img>
+              <img src={BTech} className="object-cover h-full mb-0"></img>
             </div>
             <div className="w-full h-1/4 text-2xl capitalize text-center items-center pt-3 px-4">
               Courses offered for B.Tech by Electrical Engineering
             </div>
           </div>
         </a>
-        <a href="/courses/mtech">
+        <a href="/about">
           <div className="w-96 h-96 border-2 shadow-md flex flex-col mt-8 lg:mt-0">
             <div className="w-full h-3/4 border-b-2 shadow-md">
-              <img
-                src="./Images/MTech.jpg"
-                className="object-cover h-full mb-0"
-              ></img>
+              <img src={MTech} className="object-cover h-full mb-0"></img>
             </div>
             <div className="w-full h-1/4 text-2xl capitalize text-center items-center pt-3 px-4">
               Courses offered for M.Tech by Electrical Engineering
