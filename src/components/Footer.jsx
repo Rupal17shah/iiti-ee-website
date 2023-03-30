@@ -1,5 +1,6 @@
 import React from "react";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 // import Link from
 import { Divider, Typography } from "@mui/material";
 import { motion } from "framer-motion";
@@ -19,7 +20,7 @@ const Footer = () => {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "start",
-              paddingTop: 10,
+              paddingTop: 5,
               px: 10,
             }}
           >
@@ -29,13 +30,11 @@ const Footer = () => {
               transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
               className="w-1/3"
             >
-              <Box className="footer-info" sx={{ width: "100%" }}>
+              <Box className="footer-info" sx={{ mx: 3 }}>
                 <Typography variant="h5" sx={{ color: "primary.main" }}>
-                  Important links
+                  IIT Indore Department of Electrical
                 </Typography>
                 <Typography variant="body2" sx={{ color: "secondary.main" }}>
-                  Dr. Vivek Kanhangad Head of Department
-                  <br />
                   Contact: Head, Electrical Engineering Scandium Building,
                   Academic POD Indian Institute of Technology Indore Khandwa
                   Road, Simrol Indore, Madhya Pradesh, India 453552 Email:
@@ -43,26 +42,260 @@ const Footer = () => {
                 </Typography>
               </Box>
             </motion.span>
+
             <motion.span
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
             >
               <Box className="footer-Links">
-                <Typography variant="h5" sx={{ color: "primary.main" }}>
-                  Important links
+                <Typography
+                  textAlign="center"
+                  variant="h5"
+                  sx={{ color: "primary.main" }}
+                >
+                  Important Links
                 </Typography>
-                {/* this is if needed to load without reload */}
+
+                <Box sx={{ display: "flex" }}>
+                  <Box sx={{ px: 2, borderRight: "1px solid #B7B7c7 " }}>
+                    <Typography varient="p" sx={{ color: "secondary.main" }}>
+                      About Us
+                    </Typography>
+                    <Box>
+                      <Link to="/about">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Department
+                        </Typography>
+                      </Link>
+                      <Link to="/administration">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Administration
+                        </Typography>
+                      </Link>
+                      <Link to="/contact">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Contact Us
+                        </Typography>
+                      </Link>
+                      <Link to="/gallery">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Gallery
+                        </Typography>
+                      </Link>
+                    </Box>
+                  </Box>
+                  <Box sx={{ px: 2, borderRight: "1px solid #B7B7c7 " }}>
+                    <Typography varient="p" sx={{ color: "secondary.main" }}>
+                      People
+                    </Typography>
+                    <Box>
+                      <Link to="/people/Faculty">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Faculty
+                        </Typography>
+                      </Link>
+                      <Link to="/people/Staff">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Staff
+                        </Typography>
+                      </Link>
+                      <Link to="/people/PhD">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          PhD-student
+                        </Typography>
+                      </Link>
+                      <Link to="/people/MTech">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          MTech-student
+                        </Typography>
+                      </Link>
+                      <Link to="/people/BTech">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          BTech-student
+                        </Typography>
+                      </Link>
+                    </Box>
+                  </Box>
+
+                  <Box sx={{ px: 2, borderRight: "1px solid #B7B7c7 " }}>
+                    <Typography varient="p" sx={{ color: "secondary.main" }}>
+                      Research
+                    </Typography>
+                    <Box>
+                      <Link to="/research">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Research Areas
+                        </Typography>
+                      </Link>
+                      <Link to="/labs">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Laboratories
+                        </Typography>
+                      </Link>
+                      <Link to="/publication">
+                        <Typography
+                          fontSize="0.7rem"
+                          varient="p"
+                          sx={{ color: "#B7B7c7" }}
+                        >
+                          Recent Publications
+                        </Typography>
+                      </Link>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Projects
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Open Positions
+                      </Typography>
+                    </Box>
+                  </Box>
+
+                  <Box sx={{ px: 2, borderRight: "1px solid #B7B7c7 " }}>
+                    <Typography varient="p" sx={{ color: "secondary.main" }}>
+                      Academics
+                    </Typography>
+                    <Box>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Academics
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Courses
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Scholarship
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Awards and Recognitions
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        PhD intership in Industry
+                      </Typography>
+                    </Box>
+                  </Box>
+
+                  <Box sx={{ px: 2, borderRight: "1px solid #B7B7c7 " }}>
+                    <Typography varient="p" sx={{ color: "secondary.main" }}>
+                      News & Events
+                    </Typography>
+                    <Box>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Ph.D. Positions
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Faculty Positions
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Seminars
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        CEP
+                      </Typography>
+                      <Typography
+                        fontSize="0.7rem"
+                        varient="p"
+                        sx={{ color: "#B7B7c7" }}
+                      >
+                        Placement Statistics
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Box sx={{ px: 2 }}>
+                    <Typography varient="p" sx={{ color: "secondary.main" }}>
+                      Safety Regulations
+                    </Typography>
+                  </Box>
+                </Box>
+
                 {/* <ul>
-              <li><Link to='/'><Typography variant='body2' sx={{ color: 'secondary.main' }}>Home</Typography></Link></li>
-              <li><Link to='/about'><Typography variant='body2' sx={{ color: 'secondary.main' }}>About Us</Typography></Link></li>
-              <li><Link to='/people'><Typography variant='body2' sx={{ color: 'secondary.main' }}>People</Typography></Link></li>
-              <li><Link to='/research'><Typography variant='body2' sx={{ color: 'secondary.main' }}>Reasearch</Typography></Link></li>
-              <li><Link to='/academics'><Typography variant='body2' sx={{ color: 'secondary.main' }}>Academics</Typography></Link></li>
-
-
-            </ul> */}
-                <ul>
                   <li>
                     <a href="/">
                       <Typography
@@ -113,7 +346,7 @@ const Footer = () => {
                       </Typography>
                     </a>
                   </li>
-                </ul>
+                </ul> */}
               </Box>
             </motion.span>
             <motion.span
@@ -121,7 +354,7 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
             >
-              <Box className="footer-map">
+              <Box className="footer-map" sx={{ paddingBottom: 2 }}>
                 <iframe
                   title="map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.5685679307103!2d75.91853441460319!3d22.52036464056219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962efcccbce7145%3A0x784e8cb69818596b!2sIndian%20Institute%20Of%20Technology%E2%80%93Indore%20(IIT%E2%80%93Indore)!5e0!3m2!1sen!2sin!4v1675014310074!5m2!1sen!2sin"

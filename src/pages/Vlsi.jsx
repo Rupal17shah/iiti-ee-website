@@ -62,7 +62,7 @@ export default function Vlsi() {
           <br />
           <br />
 
-          {b.map((item2, i) => (
+          {b?.map((item2, i) => (
             <>
               <Typography variant="h6" fontWeight={400} color={"primary.main"}>
                 {item2.name}
@@ -80,7 +80,7 @@ export default function Vlsi() {
             People
           </Typography>
           <Container>
-            {a.map((item, i) => (
+            {a?.map((item, i) => (
               <Typography fontSize={14}>{item}</Typography>
             ))}
           </Container>

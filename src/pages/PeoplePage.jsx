@@ -3,7 +3,7 @@ import { Typography, Box, Container, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import axios from 'axios';
 import { useState, useEffect} from 'react';
-import Cards from '../components/ResearchBody/Cards';
+import Cards from '../components/PeopleBody/Cards';
 
 export default function PeoplePage() {
   const [people, setPeople] = useState([]);
@@ -64,41 +64,41 @@ export default function PeoplePage() {
             <Grid item>
               <Cards
                 specialisation={"Staff"}
-                action={"/signals"}
+                action={"/people/staff"}
                         />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"BTech"}
-                action={"/vlsi"}
+                action={"/people/btech"}
                 // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"Faculty"}
-                action={"/vlsi"}
+                action={"/people/faculty"}
                 // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"Phd"}
-                action={"/vlsi"}
+                action={"/people/phd"}
                 // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"MTech"}
-                action={"/vlsi"}
+                action={"/people/mtech"}
                 // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>
             <Grid item>
               <Cards
                 specialisation={"Alumni"}
-                action={"/vlsi"}
+                action={"/people/alumni"}
                 // photo={"Images/logo/VLSI.jpg"}
               />
             </Grid>

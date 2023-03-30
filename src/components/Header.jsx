@@ -6,6 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
+import HomeIcon from "@mui/icons-material/Home";
 import Container from "@mui/material/Container";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -35,6 +36,7 @@ const Header = () => {
   const [open2, setOpen2] = React.useState(false);
   const [open3, setOpen3] = React.useState(false);
   const [open4, setOpen4] = React.useState(false);
+  const [open5, setOpen5] = React.useState(false);
 
   const handleClick1 = () => {
     setOpen1(!open1);
@@ -47,6 +49,9 @@ const Header = () => {
   };
   const handleClick4 = () => {
     setOpen4(!open4);
+  };
+  const handleClick5 = () => {
+    setOpen5(!open5);
   };
 
   const [state, setState] = React.useState({
@@ -89,7 +94,7 @@ const Header = () => {
         }
       >
         <ListItemButton onClick={toggleDrawer(anchor, false)}>
-          <Link to="/">
+          <Link className="nav-link" to="/">
             <ListItemText primary="Home" />
           </Link>
         </ListItemButton>
@@ -104,7 +109,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/about">
+              <Link className="nav-link" to="/about">
                 <ListItemText primary="Department" />
               </Link>
             </ListItemButton>
@@ -112,7 +117,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/admministration">
+              <Link className="nav-link" to="/admministration">
                 <ListItemText primary="Administration" />
               </Link>
             </ListItemButton>
@@ -120,7 +125,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/contact">
+              <Link className="nav-link" to="/contact">
                 <ListItemText primary="Contact Us" />
               </Link>
             </ListItemButton>
@@ -128,7 +133,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/gallery">
+              <Link className="nav-link" to="/gallery">
                 <ListItemText primary="Gallery" />
               </Link>
             </ListItemButton>
@@ -145,15 +150,15 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/people">
-                <ListItemText primary="Factuly" />
+              <Link className="nav-link" to="/people/faculty">
+                <ListItemText primary="Faculty" />
               </Link>
             </ListItemButton>
             <ListItemButton
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/people">
+              <Link className="nav-link" to="/people/Staff">
                 <ListItemText primary="Staff" />
               </Link>
             </ListItemButton>
@@ -161,7 +166,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/">
+              <Link className="nav-link" to="/people/PhD">
                 <ListItemText primary="PhD Student" />
               </Link>
             </ListItemButton>
@@ -169,7 +174,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/">
+              <Link className="nav-link" to="/people/Mtech">
                 <ListItemText primary="Mtech Student" />
               </Link>
             </ListItemButton>
@@ -177,7 +182,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/">
+              <Link className="nav-link" to="/people/Btech">
                 <ListItemText primary="Btech Student" />
               </Link>
             </ListItemButton>
@@ -185,7 +190,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/">
+              <Link className="nav-link" to="/people/Alumni">
                 <ListItemText primary="Alumni" />
               </Link>
             </ListItemButton>
@@ -202,7 +207,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/research">
+              <Link className="nav-link" to="/research">
                 <ListItemText primary="Research Areas" />
               </Link>
             </ListItemButton>
@@ -210,7 +215,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/labs">
+              <Link className="nav-link" to="/labs">
                 <ListItemText primary="Laboratories" />
               </Link>
             </ListItemButton>
@@ -218,7 +223,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/">
+              <Link className="nav-link" to="/">
                 <ListItemText primary="Recent Publications" />
               </Link>
             </ListItemButton>
@@ -226,7 +231,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/">
+              <Link className="nav-link" to="/">
                 <ListItemText primary="Projects" />
               </Link>
             </ListItemButton>
@@ -243,7 +248,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/about">
+              <Link className="nav-link" to="/about">
                 <ListItemText primary="Programs" />
               </Link>
             </ListItemButton>
@@ -251,7 +256,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/admministration">
+              <Link className="nav-link" to="/admministration">
                 <ListItemText primary="Courses" />
               </Link>
             </ListItemButton>
@@ -259,7 +264,7 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/contact">
+              <Link className="nav-link" to="/contact">
                 <ListItemText primary="Scholarships" />
               </Link>
             </ListItemButton>
@@ -267,25 +272,56 @@ const Header = () => {
               sx={{ pl: 4 }}
               onClick={toggleDrawer(anchor, false)}
             >
-              <Link to="/gallery">
+              <Link className="nav-link" to="/gallery">
                 <ListItemText primary="Awards and Recognitions" />
               </Link>
             </ListItemButton>
           </List>
         </Collapse>
 
-        <ListItemButton onClick={toggleDrawer(anchor, false)}>
-          <Link to="/">
-            <ListItemText primary="Open Positions" />
-          </Link>
+        <ListItemButton onClick={handleClick5}>
+          <ListItemText primary="Open Positions" />
+          {open5 ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
+        <Collapse in={open5} timeout="auto" unmountOnExit>
+          <List component="div" disablePadding>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link className="nav-link" to="/about">
+                <ListItemText primary="Faculty Position" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link
+                className="nav-link"
+                to="https://academic.iiti.ac.in/phdadvt.php"
+              >
+                <ListItemText primary="PhD Positions" />
+              </Link>
+            </ListItemButton>
+            <ListItemButton
+              sx={{ pl: 4 }}
+              onClick={toggleDrawer(anchor, false)}
+            >
+              <Link className="nav-link" to="/contact">
+                <ListItemText primary="Project Positions" />
+              </Link>
+            </ListItemButton>
+          </List>
+        </Collapse>
       </List>
     </Box>
   );
 
+  ////////////////////////////////////////return////////////////////////////////
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="static" color="four">
         <Box
           sx={{
             display: { xs: "flex", md: "none" },
@@ -295,7 +331,7 @@ const Header = () => {
           }}
         >
           <Box>
-            <img src="Images/white-logo.png" alt="loggg" width="50" />
+            <img src="/Images/white-logo.png" alt="loggg" width="50" />
           </Box>
           <Box sx={{ px: 1 }}>
             <Typography fontSize="0.7rem" color="white">
@@ -308,10 +344,10 @@ const Header = () => {
           </Box>
           <IconButton
             onClick={toggleDrawer("left", true)}
-            sx={{ ml: "auto" }}
-            color="secondary"
+            sx={{ ml: "auto", color: "white" }}
           >
-            <MenuIcon />
+            <MenuIcon color="secondary" />
+            {/* <HomeIcon color="secondary" /> */}
           </IconButton>
         </Box>
       </AppBar>
@@ -335,7 +371,7 @@ const Header = () => {
                 py: 1,
               }}
             >
-              <img src="Images/logo.png" alt="logo_image" width="80" />
+              <img src="/Images/logo.png" alt="logo_image" width="80" />
               <Box sx={{ my: "auto", px: 2 }}>
                 <Typography fontSize="1.2rem" fontWeight="bold">
                   DEPARTMENT OF ELECTRICAL ENGINEERING
@@ -358,9 +394,6 @@ const Header = () => {
                 },
               }}
             >
-              {/* <Drawer>
-               
-              </Drawer> */}
               <Drawer
                 anchor={"left"}
                 open={state["left"]}
@@ -383,7 +416,7 @@ const Header = () => {
                 {(popupState) => (
                   <React.Fragment>
                     <Button {...bindTrigger(popupState)}>
-                      <Link to="/">
+                      <Link className="nav-link" to="/">
                         <Typography className="nav-links">Home</Typography>
                       </Link>
                     </Button>
@@ -398,16 +431,24 @@ const Header = () => {
                     </Button>
                     <Menu {...bindMenu(popupState)}>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/about">Department</Link>
+                        <Link className="nav-link" to="/about">
+                          Department
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/administration">Administration</Link>
+                        <Link className="nav-link" to="/administration">
+                          Administration
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/contact">Contact Us</Link>
+                        <Link className="nav-link" to="/contact">
+                          Contact Us
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/gallery">Gallery</Link>
+                        <Link className="nav-link" to="/gallery">
+                          Gallery
+                        </Link>
                       </MenuItem>
                     </Menu>
                   </React.Fragment>
@@ -421,19 +462,35 @@ const Header = () => {
                     </Button>
                     <Menu {...bindMenu(popupState)}>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/people">Faculty</Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>Staff</MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        PhD Student
+                        <Link className="nav-link" to="/people/faculty">
+                          Faculty
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>
-                        M Tech Student
+                        <Link className="nav-link" to="/people/Staff">
+                          Staff
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>
-                        B Tech Student
+                        <Link className="nav-link" to="/people/PhD">
+                          PhD Student
+                        </Link>
                       </MenuItem>
-                      <MenuItem onClick={popupState.close}>Alumni</MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link className="nav-link" to="/people/Mtech">
+                          M Tech Student
+                        </Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link className="nav-link" to="/people/Btech">
+                          B Tech Student
+                        </Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link className="nav-link" to="/people/Alumni">
+                          Alumni
+                        </Link>
+                      </MenuItem>
                     </Menu>
                   </React.Fragment>
                 )}
@@ -446,13 +503,19 @@ const Header = () => {
                     </Button>
                     <Menu {...bindMenu(popupState)}>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/research">Research Areas</Link>
+                        <Link className="nav-link" to="/research">
+                          Research Areas
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/labs">Laboratories</Link>
+                        <Link className="nav-link" to="/labs">
+                          Laboratories
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/publication">Recent Publications</Link>
+                        <Link className="nav-link" to="/publication">
+                          Recent Publications
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>Projects</MenuItem>
                     </Menu>
@@ -468,7 +531,9 @@ const Header = () => {
                     <Menu {...bindMenu(popupState)}>
                       <MenuItem onClick={popupState.close}>Programs</MenuItem>
                       <MenuItem onClick={popupState.close}>
-                        <Link to="/courses">Courses</Link>
+                        <Link className="nav-link" to="/courses">
+                          Courses
+                        </Link>
                       </MenuItem>
                       <MenuItem onClick={popupState.close}>
                         Scholarships Publications
@@ -488,6 +553,21 @@ const Header = () => {
                         Open Positions
                       </Typography>
                     </Button>
+                    <Menu {...bindMenu(popupState)}>
+                      <MenuItem onClick={popupState.close}>
+                        <Link className="nav-link" to="/courses">
+                          Faculty Positions
+                        </Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        <Link to="https://academic.iiti.ac.in/phdadvt.php">
+                          PhD Positions
+                        </Link>
+                      </MenuItem>
+                      <MenuItem onClick={popupState.close}>
+                        Project Positions
+                      </MenuItem>
+                    </Menu>
                   </React.Fragment>
                 )}
               </PopupState>

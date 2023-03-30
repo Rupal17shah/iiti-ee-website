@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Card } from "@mui/material";
 import { Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { ButtonBase } from "@mui/material";
 
 export default function Cards(props) {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <div>
       <br />
@@ -22,17 +22,17 @@ export default function Cards(props) {
         spacing={2}
       >
         <Grid item mt={5}>
-          <Card sx={{ maxWidth: 500, bgcolor: "primary.main" }}>
-            <ButtonBase
-              onClick={() => {
-                navigate(string.concat("/",props.people_type));
-              }}
-            >
+          <ButtonBase
+            onClick={() => {
+              navigate("/people/" + `${props.specialisation}`);
+            }}
+          >
+            <Card sx={{ width: 300, backgroundColor:"primary.main"}}>
               <CardContent>
-                <Typography color={"white"}>{props.people_type}</Typography>
+                <Typography color={"white"}>{props.specialisation}</Typography>
               </CardContent>
-            </ButtonBase>
-          </Card>
+            </Card>
+          </ButtonBase>
         </Grid>
       </Grid>
     </div>

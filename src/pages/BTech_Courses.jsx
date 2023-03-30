@@ -54,9 +54,7 @@ export default function BTech_Courses() {
               <th className="border-2 text-center px-2 py-2 capitalize w-48">
                 Course Code
               </th>
-              <th className="border-2 text-center w-96">
-                Course Name
-              </th>
+              <th className="border-2 text-center w-96">Course Name</th>
             </tr>
             <tr>
               <td className="border-2 px-2 py-2">EE 104</td>

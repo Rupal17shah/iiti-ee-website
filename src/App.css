@@ -4,10 +4,10 @@
   box-sizing: border-box;
   text-decoration: none;
   /* color: #000000; */
-  font-family: 'Ubuntu', sans-serif;
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+  font-family: "Ubuntu", sans-serif;
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 }
 
 * {
@@ -15,26 +15,15 @@
   margin: 0%;
   box-sizing: border-box;
   text-decoration: none;
+  /* color: #000000; */
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* ////////////////////////Header///////////////// */
+
+.nav-links {
+  text-transform: capitalize;
   color: #000000;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-
-/* ////////////////////////Header///////////////// */
-
-
-
-.nav-links {
-  padding: 7px 7px 7px 7px;
-}
-
-/* ////////////////////////Header///////////////// */
-
-
-
-.nav-links {
-  padding: 7px 7px 7px 7px;
-
 }
 
 .nav-links:hover {
@@ -45,11 +34,15 @@
   color: #9d0455;
 }
 
+/* ////////////////////////Header///////////////// */
 
-.footer{
-  position: relative;
-  bottom: 0;
-}
+/* ////////////////////////Carousel/////////////////////////// */
+/* .carousel-text {
+  position: absolute;
+  top: 200px;
+  margin: auto;
+  text-shadow: 4px 4px 5px #000000;
+} */
 
 /* ////////////////////////Carousel/////////////////////////// */
 .carousel-text {
@@ -57,13 +50,35 @@
   top: 200px;
   margin: auto;
   text-shadow: 4px 4px 5px #000000;
+  /* color: #919191; */
 }
 
+/* /////////////////////////Footer/////////////////////////////////// */
 
-/* ////////////////////////Carousel/////////////////////////// */
-.carousel-text {
-  position: absolute;
-  top: 200px;
-  margin: auto;
-  text-shadow: 4px 4px 5px #000000;
+/* /////////////////////////Counter//////////////////////////// */
+.Counter-div {
+
+  background-image: url(/public/Images/bg.jpg);
+
+  background-position: 100%;
+
+}
+
+.grey-screen {
+  background-image: red;
+
+
+}
+
+.bg-text {
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(5, 5, 5, 0.7);
+
+
+}
+
+.Footer-div {
+  background-image: url(/public/Images/bg.jpg);
+  background-position: 100%;
+  background-size: cover;
 }

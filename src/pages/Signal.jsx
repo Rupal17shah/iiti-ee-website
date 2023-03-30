@@ -20,8 +20,8 @@ export default function Signal() {
     }
   }, []);
   console.log(research.people);
-    const a = research.people;
-    const b = research.research;
+  const a = research.people;
+  const b = research.research;
   return (
     <div>
       <div>
@@ -61,7 +61,7 @@ export default function Signal() {
           <br />
           <br />
 
-          {b.map((item2, i) => (
+          {b?.map((item2, i) => (
             <>
               <Typography variant="h6" fontWeight={400} color={"primary.main"}>
                 {item2.name}
@@ -70,7 +70,6 @@ export default function Signal() {
                 <Typography variant="p">{item2.description} </Typography>
               </Container>
             </>
-
           ))}
 
           <br />
@@ -80,7 +79,7 @@ export default function Signal() {
             People
           </Typography>
           <Container>
-            {a.map((item, i) => (
+            {a?.map((item, i) => (
               <Typography fontSize={14}>{item}</Typography>
             ))}
           </Container>

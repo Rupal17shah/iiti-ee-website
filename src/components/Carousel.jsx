@@ -11,17 +11,62 @@ function Example(props) {
     {
       name: "Random Name #1",
       description: "Probably the most random thing you have ever seen!",
-      img_url: "Images/bg_1.jpg",
+      img_url: "/Images/Carousel/1.jpg",
     },
     {
       name: "Random Name #2",
       description: "Hello World!",
-      img_url: "Images/bg_2.jpg",
+      img_url: "/Images/Carousel/2.jpg",
     },
     {
       name: "Random Name #3",
       description: "Hello World!",
-      img_url: "Images/bg_3.jpg",
+      img_url: "/Images/Carousel/3.jpg",
+    },
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/4.jpg",
+    },
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/5.jpg",
+    },
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/6.jpg",
+    },
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/7.jpg",
+    },
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/8.jpg",
+    },
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/9.jpg",
+    }, 
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/10.jpg",
+    },
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/11.jpg",
+    },
+    {
+      name: "Random Name #3",
+      description: "Hello World!",
+      img_url: "/Images/Carousel/12.jpg",
     },
   ];
 
@@ -37,7 +82,7 @@ function Example(props) {
 function Item(props) {
   return (
     <>
-      <Box sx={{ display: { xs: "none", md: "flex" } }}>
+      <Box sx={{ display: { xs: "none", md: "flex" }, background:"black" }}>
         {/* <ImageList sx={{ width: '100%', height: 500 }} cols={1} rowHeight={1}>
                 
                     <ImageListItem >
@@ -50,7 +95,7 @@ function Item(props) {
                     </ImageListItem>
                 
             </ImageList> */}
-        <img src={props.item.img_url} alt="carr" width="100%" height="600px" />
+        <img src={props.item.img_url} alt="carr" width="100%" />
         {/* <div className='carousel-text'>
 
                 <h2>{props.item.name}</h2>
@@ -61,8 +106,8 @@ function Item(props) {
                 </Button>
             </div> */}
       </Box>
-      <Box sx={{ display: { xs: "flex", md: "none" } }}>
-        <img src={props.item.img_url} alt="carr" width="100%" height="250px" />
+      <Box sx={{ display: { xs: "flex", md: "none" } , background:"black" }}>
+        <img src={props.item.img_url} alt="carr" width="100%" />
       </Box>
     </>
   );
