@@ -2,13 +2,15 @@ import React from "react";
 import Body from "../components/HomeBody/Body";
 import Carousel from "../components/Carousel";
 import { Container } from "@mui/system";
+import NewCarousel from "../components/NewCarousel";
 
 const HomePage = () => {
   return (
     <>
-      <Container sx={{ marginTop: "20px" }}>
-        <Carousel />
-      </Container>
+
+      {/* <Carousel /> */}
+      <NewCarousel />
+
       <Body />
     </>
   );

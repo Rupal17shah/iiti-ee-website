@@ -23,6 +23,7 @@ import Publication from "./data/Publication";
 import CoursePage from "./pages/CoursePage";
 import FooterWithCounter from "./components/FooterWithCounter";
 import NotFoundPage from "./pages/NotFoundPage";
+import NewHeader from "./components/NewHeader";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <Header />
+          {/* <NewHeader /> */}
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<Template Data={AboutUs} />} />

@@ -34,6 +34,8 @@ const FooterWithCounter = () => {
             Achievements
           </Typography>
 
+          {/* /////////////////////////for large display////////////////////////// */}
+
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Box
               sx={{
@@ -179,6 +181,7 @@ const FooterWithCounter = () => {
               <Typography color="secondary">Project Grant</Typography>
             </Box>
           </Box>
+
           {/* /////////////////////////for small display////////////////////////// */}
 
           <Box>
@@ -187,7 +190,7 @@ const FooterWithCounter = () => {
                 display: { xs: "flex", md: "none" },
                 flexDirection: "column",
                 alignItems: "center",
-                margin:"auto"
+                margin: "auto"
               }}
             >
               <Box
@@ -196,7 +199,7 @@ const FooterWithCounter = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   mb: 4,
-                  width: "15%",
+                  width: "100%",
                 }}
               >
                 <SupervisedUserCircle color="secondary" sx={{ fontSize: 40 }} />
@@ -216,7 +219,8 @@ const FooterWithCounter = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: "15%",
+                  mb: 4,
+                  width: "100%",
                 }}
               >
                 <School color="secondary" sx={{ fontSize: 40 }} />
@@ -236,7 +240,8 @@ const FooterWithCounter = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: "15%",
+                  mb: 4,
+                  width: "100%",
                 }}
               >
                 <LibraryBooksIcon color="secondary" sx={{ fontSize: 40 }} />
@@ -256,7 +261,8 @@ const FooterWithCounter = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: "15%",
+                  mb: 4,
+                  width: "100%",
                 }}
               >
                 <Timeline color="secondary" sx={{ fontSize: 40 }} />
@@ -277,7 +283,8 @@ const FooterWithCounter = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: "15%",
+                  mb: 4,
+                  width: "100%",
                 }}
               >
                 <PublicIcon color="secondary" sx={{ fontSize: 40 }} />
@@ -297,7 +304,8 @@ const FooterWithCounter = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  width: "15%",
+                  mb: 4,
+                  width: "100%",
                 }}
               >
                 <ExtensionIcon color="secondary" sx={{ fontSize: 40 }} />
@@ -317,6 +325,28 @@ const FooterWithCounter = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  mb: 4,
+                  width: "100%",
+                }}
+              >
+                <CurrencyRupee color="secondary" sx={{ fontSize: 40 }} />
+                <Typography color="secondary">
+                  <CountUp end={95} duration={2}>
+                    {({ countUpRef, start }) => (
+                      <VisibilitySensor onChange={start} delayedCall>
+                        <span ref={countUpRef} />
+                      </VisibilitySensor>
+                    )}
+                  </CountUp>.7
+                </Typography>
+                <Typography color="secondary">Project Grant</Typography>
+              </Box>
+              {/* <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  mb: 4,
                   width: "15%",
                 }}
               >
@@ -329,10 +359,10 @@ const FooterWithCounter = () => {
                       </VisibilitySensor>
                     )}
                   </CountUp>
-                  .7213 Cr
+                  .7 Cr
                 </Typography>
                 <Typography color="secondary">Project Grant</Typography>
-              </Box>
+              </Box> */}
             </Box>
           </Box>
 
