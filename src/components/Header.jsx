@@ -29,6 +29,7 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import StarBorder from "@mui/icons-material/StarBorder";
 import { HomeRepairServiceOutlined } from "@mui/icons-material";
+import NewHeader from "./NewHeader";
 
 const Header = () => {
   const theme = useTheme();
@@ -321,6 +322,7 @@ const Header = () => {
   ////////////////////////////////////////return////////////////////////////////
   return (
     <>
+      <NewHeader />
       <AppBar position="static" color="four">
         <Box
           sx={{
@@ -351,7 +353,26 @@ const Header = () => {
           </IconButton>
         </Box>
       </AppBar>
-      <AppBar
+      <Box
+        sx={{
+          flexGrow: 1,
+          display: {
+            xs: "flex",
+            md: "none",
+            backgroundColor: "#9d0455",
+            width: "100%",
+          },
+        }}
+      >
+        <Drawer
+          anchor={"left"}
+          open={state["left"]}
+          onClose={toggleDrawer("left", false)}
+        >
+          {list("left")}
+        </Drawer>
+      </Box>
+      {/* <AppBar
         position="static"
         color="secondary"
         sx={{ display: { xs: "none", md: "flex" } }}
@@ -383,25 +404,7 @@ const Header = () => {
               </Box>
             </Box>
 
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: {
-                  xs: "flex",
-                  md: "none",
-                  backgroundColor: "#9d0455",
-                  width: "100%",
-                },
-              }}
-            >
-              <Drawer
-                anchor={"left"}
-                open={state["left"]}
-                onClose={toggleDrawer("left", false)}
-              >
-                {list("left")}
-              </Drawer>
-            </Box>
+
 
             <Box
               sx={{
@@ -574,7 +577,7 @@ const Header = () => {
             </Box>
           </Toolbar>
         </Container>
-      </AppBar>
+      </AppBar> */}
     </>
   );
 };
