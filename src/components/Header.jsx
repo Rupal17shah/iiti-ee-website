@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,8 +13,6 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { Button, Menu, MenuItem } from "@mui/material";
 
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 
@@ -72,7 +70,6 @@ const Header = () => {
 
     setState({ ...state, [anchor]: open });
   };
-
   const list = (anchor) => (
     <Box
       sx={{
@@ -349,7 +346,6 @@ const Header = () => {
             sx={{ ml: "auto", color: "white" }}
           >
             <MenuIcon color="secondary" />
-            {/* <HomeIcon color="secondary" /> */}
           </IconButton>
         </Box>
       </AppBar>
@@ -372,212 +368,6 @@ const Header = () => {
           {list("left")}
         </Drawer>
       </Box>
-      {/* <AppBar
-        position="static"
-        color="secondary"
-        sx={{ display: { xs: "none", md: "flex" } }}
-      >
-        <Container
-          maxWidth="xl"
-          disableGutters={useMediaQuery(theme.breakpoints.only("xs"))}
-        >
-          <Toolbar disableGutters>
-            <Box
-              className="logo-div"
-              sx={{
-                display: { xs: "none", md: "flex" },
-
-                alignContent: "center",
-                px: 7,
-                py: 1,
-              }}
-            >
-              <img src="/Images/logo.png" alt="logo_image" width="80" />
-              <Box sx={{ my: "auto", px: 2 }}>
-                <Typography fontSize="1.2rem" fontWeight="bold">
-                  DEPARTMENT OF ELECTRICAL ENGINEERING
-                  <br />
-                </Typography>
-                <Typography fontSize="1.0rem" fontWeight={600}>
-                  INDIAN INSTITUTE OF TECHNOLOGY INDORE
-                </Typography>
-              </Box>
-            </Box>
-
-
-
-            <Box
-              sx={{
-                flexGrow: 1,
-                display: { xs: "none", md: "flex" },
-                justifyContent: "space-around",
-                // maxWidth:'40%'
-                paddingLeft: "5%",
-              }}
-            >
-              <PopupState popupId="demo-popup-menu">
-                {(popupState) => (
-                  <React.Fragment>
-                    <Button {...bindTrigger(popupState)}>
-                      <Link className="nav-link" to="/">
-                        <Typography className="nav-links">Home</Typography>
-                      </Link>
-                    </Button>
-                  </React.Fragment>
-                )}
-              </PopupState>
-              <PopupState popupId="demo-popup-menu">
-                {(popupState) => (
-                  <React.Fragment>
-                    <Button {...bindTrigger(popupState)}>
-                      <Typography className="nav-links">About</Typography>
-                    </Button>
-                    <Menu {...bindMenu(popupState)}>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/about">
-                          Department
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/administration">
-                          Administration
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/contact">
-                          Contact Us
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/gallery">
-                          Gallery
-                        </Link>
-                      </MenuItem>
-                    </Menu>
-                  </React.Fragment>
-                )}
-              </PopupState>
-              <PopupState popupId="demo-popup-menu">
-                {(popupState) => (
-                  <React.Fragment>
-                    <Button {...bindTrigger(popupState)}>
-                      <Typography className="nav-links">People</Typography>
-                    </Button>
-                    <Menu {...bindMenu(popupState)}>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/people/faculty">
-                          Faculty
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/people/Staff">
-                          Staff
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/people/PhD">
-                          PhD Student
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/people/Mtech">
-                          M Tech Student
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/people/Btech">
-                          B Tech Student
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/people/Alumni">
-                          Alumni
-                        </Link>
-                      </MenuItem>
-                    </Menu>
-                  </React.Fragment>
-                )}
-              </PopupState>
-              <PopupState popupId="demo-popup-menu">
-                {(popupState) => (
-                  <React.Fragment>
-                    <Button {...bindTrigger(popupState)}>
-                      <Typography className="nav-links">Research</Typography>
-                    </Button>
-                    <Menu {...bindMenu(popupState)}>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/research">
-                          Research Areas
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/labs">
-                          Laboratories
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/publication">
-                          Recent Publications
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>Projects</MenuItem>
-                    </Menu>
-                  </React.Fragment>
-                )}
-              </PopupState>
-              <PopupState popupId="demo-popup-menu">
-                {(popupState) => (
-                  <React.Fragment>
-                    <Button {...bindTrigger(popupState)}>
-                      <Typography className="nav-links">Academics</Typography>
-                    </Button>
-                    <Menu {...bindMenu(popupState)}>
-                      <MenuItem onClick={popupState.close}>Programs</MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/courses">
-                          Courses
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        Scholarships Publications
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        Awards and Recognitions
-                      </MenuItem>
-                    </Menu>
-                  </React.Fragment>
-                )}
-              </PopupState>
-              <PopupState popupId="demo-popup-menu">
-                {(popupState) => (
-                  <React.Fragment>
-                    <Button {...bindTrigger(popupState)}>
-                      <Typography className="nav-links">
-                        Open Positions
-                      </Typography>
-                    </Button>
-                    <Menu {...bindMenu(popupState)}>
-                      <MenuItem onClick={popupState.close}>
-                        <Link className="nav-link" to="/courses">
-                          Faculty Positions
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        <Link to="https://academic.iiti.ac.in/phdadvt.php">
-                          PhD Positions
-                        </Link>
-                      </MenuItem>
-                      <MenuItem onClick={popupState.close}>
-                        Project Positions
-                      </MenuItem>
-                    </Menu>
-                  </React.Fragment>
-                )}
-              </PopupState>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar> */}
     </>
   );
 };

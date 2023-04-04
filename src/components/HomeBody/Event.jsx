@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { Grid } from '@mui/material';
+import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function Event(props) {
   return (
@@ -77,9 +78,9 @@ export default function Event(props) {
             direction="column"
             alignItems="flex-start"
             spacing={0}
-                  >
-                      <br/>
-                                  <Grid item>
+          >
+            <br />
+            <Grid item>
               <Typography
                 color="gray"
                 sx={{
@@ -98,13 +99,15 @@ export default function Event(props) {
                   fontSize: "9px",
                 }}
               >
-               {props.description}
+                {props.description}
               </Typography>
             </Grid>
           </Grid>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small">
+            <Link to={props.link}> Learn More...</Link>
+          </Button>
         </CardActions>
       </Card>
     </div>

@@ -172,6 +172,7 @@ export default function Events() {
                   description={item.description}
                   time={item.time}
                   day={item.day}
+                  link={item.link}
                 />
               </Grid>
             ))}

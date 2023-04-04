@@ -82,7 +82,7 @@ function Example(props) {
 function Item(props) {
   return (
     <>
-      <Box sx={{ display: { xs: "none", md: "flex" }, background: "black" }}>
+      {/* <Box sx={{ display: { xs: "none", md: "flex" }, background: "black" }}> */}
         {/* <ImageList sx={{ width: '100%', height: 500 }} cols={1} rowHeight={1}>
                 
                     <ImageListItem >
@@ -95,7 +95,7 @@ function Item(props) {
                     </ImageListItem>
                 
             </ImageList> */}
-        <img className='carousel-div' src={props.item.img_url} alt="carr" width="100%" />
+        {/* <img className='carousel-div' src={props.item.img_url} alt="carr" width="100%" /> */}
         {/* <div className='carousel-text'>
 
                 <h2>{props.item.name}</h2>
@@ -105,7 +105,7 @@ function Item(props) {
                     Check it out!
                 </Button>
             </div> */}
-      </Box>
+      {/* </Box> */}
       <Box sx={{ display: { xs: "flex", md: "none" }, background: "black" }}>
         <img src={props.item.img_url} alt="carr" width="100%" />
       </Box>

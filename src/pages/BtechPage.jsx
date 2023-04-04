@@ -6,6 +6,7 @@ import Btech_Card from "../components/PeopleBody/Btech_Card";
 import Staff_Card from "../components/PeopleBody/Staff_Card";
 import PHD_Card from "../components/PeopleBody/PHD_Card";
 import { useState, useEffect } from "react";
+import Alumni_Cards from "../components/PeopleBody/Alumni_Cards";
 export default function BtechPage(props) {
   return (
     <div>
@@ -177,7 +178,7 @@ export default function BtechPage(props) {
           <></>
         )}
 
-        {props.heading === "Alumni" ? (
+        {/* {props.heading === "Alumni" ? (
           <>
             <Grid
               container
@@ -194,7 +195,7 @@ export default function BtechPage(props) {
           </>
         ) : (
           <></>
-        )}
+        )} */}
 
         {props.heading === "Staff" ? (
           <>
@@ -210,6 +211,101 @@ export default function BtechPage(props) {
                 <Btech_Card
                   specialisation={"MTech"}
                   name={"Vijay"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
+            </Grid>
+          </>
+        ) : (
+          <></>
+        )}
+
+        {/* /////////////////////Alumni////////////////////// */}
+
+        {props.heading === "Alumni" ? (
+          <>
+            <Grid
+              container
+              justifyContent={"space-around"}
+              alignItems={"center"}
+              direction={"row"}
+              spacing={6}
+              sx={{ pt: 4 }}
+            >
+              <Grid item>
+                <Alumni_Cards
+                  specialisation={"MTech"}
+                  name={"Vijayyyyyyyyyyyyy"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
+              <Grid item>
+                <Alumni_Cards
+                  specialisation={"MTech"}
+                  name={"Vijayyyyyyyyyyyyy"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
+              <Grid item>
+                <Alumni_Cards
+                  specialisation={"MTech"}
+                  name={"Vijayyyyyyyyyyyyy"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
+              <Grid item>
+                <Alumni_Cards
+                  specialisation={"MTech"}
+                  name={"Vijayyyyyyyyyyyyy"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
+              <Grid item>
+                <Alumni_Cards
+                  specialisation={"MTech"}
+                  name={"Vijayyyyyyyyyyyyy"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
+              <Grid item>
+                <Alumni_Cards
+                  specialisation={"MTech"}
+                  name={"Vijayyyyyyyyyyyyy"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
+              <Grid item>
+                <Alumni_Cards
+                  specialisation={"MTech"}
+                  name={"Vijayyyyyyyyyyyyy"}
                   photo={"Images/logo/VLSI.jpg"}
                   topic={
                     "Speech signal analysis on non-stationary signals models"

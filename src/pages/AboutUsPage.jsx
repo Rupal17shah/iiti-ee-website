@@ -1,76 +1,104 @@
-import React from 'react'
-import Container from '@mui/material/Container'
-import { Typography } from '@mui/material'
-import { Box } from '@mui/system'
+import React from "react";
+import Container from "@mui/material/Container";
+import { Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import { motion } from "framer-motion";
-
 
 const AboutUsPage = () => {
   return (
     <>
-      <Box className="cornerspacing" sx={{ py: 10 }}>
-        <Container maxWidth="lg">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
-          >
-            <Typography variant="h3" color="primary" textAlign="center">
-              Welcome to the
-            </Typography>
-          </motion.div>
+      <Container sx={{ py: 2 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+        >
+          <Typography variant="h4" color="primary" textAlign="center">
+            About Us
+          </Typography>
           <Typography variant="h5" color="teritiary" textAlign="center">
             Department of Electrical Engineering
           </Typography>
-          <hr />
-          <hr />
+        </motion.div>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
           >
-            <Typography variant="p">
-              Welcome to the Department of Electrical Engineering - the largest
-              department at IIT Indore, comprising internationally renowned
-              faculty and state-of- the-art research labs to carry out the
-              research endeavors. The Department is home to multiple academic
-              courses of undergraduates and graduate ranks, internships for
-              meritorious students and research resources reckoned of
-              international caliber in the field of Electrical and Electronics
-              Engineering. The diverse areas of research expertise of our
-              faculty members include Power Systems and Power Electronics,
-              Integration of Renewable Energy Sources, Smart Grid,
-              Nanotechnology and Nanoelectronics, Communications and Networking,
-              Signal Processing, Optoelectronics and Biophotonics. The
-              department offers three academic degrees: 1) B.Tech., 2) MS (by
-              Research) in Electrical Engineering 3) M.Tech. and 4) Ph.D. in
-              Electrical Engineering with a concentration in Electrical,
-              Electronics, Signal Processing and Communication Technology. The
-              department also offers 5-year dual B.Tech/M.Tech. degree and a
-              dual M.Tech./Ph.D. degree. We are focused on preparing students to
-              address the contemporary and future challenges of the
-              ever-evolving fields involving Electrical Engineering. We strongly
-              endorse research collaboration, ties with industries and a
-              supportive culture. In tune with the inter-disciplinary research
-              philosophy of IIT Indore, we have interlaced Electrical
-              Engineering with other departments of IIT Indore into a cohesive
-              unit. This combination enhances interdisciplinary collaboration
-              among students and faculty, creating cutting-edge research
-              opportunities. The ultimate motto is to conduct research and
-              contribute to the development of innovative solutions/technologies
-              for the benefit of the society, and economy as a whole. We welcome
-              you to explore the great opportunities offered in our department
-              for students and potential industrial research affiliates akin.
-              Also we invite you to learn more about research areas of expertise
-              of our leading-edge faculty and research centers/labs by visiting
-              the links available in the web page or contacting any of our
-              faculty.
-            </Typography>
+            <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
+              <hr />
+            </Box>
           </motion.div>
-        </Container>
-      </Box>
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+          >
+            <Box sx={{ borderTop: "7px solid black", px: 4 }}>
+              <hr />
+            </Box>
+          </motion.div>
+        </Box>
+        <br />
+        <br />
+        <img src="/ImageS/bg_1.JPG" />
+        <br />
+        <br/>
+    <Typography variant="p" fontSize={"0.9rem"}>
+          One of the founding departments of the Institute from 2009, the
+          Department of Electrical Engineering at IIT Indore has played a
+          prominent role by setting the highest standards in teaching and
+          research. Over the years, several new interdisciplinary courses and
+          programs in the fields of Communications and Signal Processing (CSP),
+          VLSI Design and Nanotechnology (VDN), have been offered.
+          <br />
+          conferred with several awards and fellowships at national and
+          international levels. Many of the faculty members have memberships in
+          various professional societies of the IEEE. Several serve on the
+          editorial boards of reputed international and national journals and
+          review technical articles for journals on a regular basis.
+          Furthermore, many serve as technical and organizing committee members
+          of international symposia and conferences. Some faculty have excelled
+          in teaching and have been conferred awards and recognitions for their
+          contributions. Some also have books and monographs to their credit.
+          <br />
+          The department aims to focus on imparting fundamental domain knowledge
+          through its core curriculum, responding to the changing developments
+          via offering a vibrant set of electives, and contributing to
+          technology development. We aim to continuously be broadening our
+          scope, building up on the current strengths, engage effectively with
+          the industry for technology transfer, and endeavour to set high
+          academic standards for the society.
+          <br />
+          Faculty members, 17 in number at present, have excellent academic
+          credentials and are well known for their contributions. The diverse
+          areas of research expertise of the department faculty members include
+          Power Systems and Power Electronics, Integration of Renewable Energy
+          Sources, Smart Grid, Nanotechnology and Nanoelectronics,
+          Communications and Networking, Signal Processing, Optoelectronics and
+          Bio- photonics. They have been conferred with several awards and
+          fellowships at national and international levels. Many of the faculty
+          members have memberships in various professional societies of the
+          IEEE. Several serve on the editorial boards of reputed international
+          and national journals and review technical articles for journals on a
+          regular basis. Furthermore, many serve as technical and organizing
+          committee members of international symposia and conferences. Some
+          faculty have excelled in teaching and have been conferred awards and
+          recognitions for their contributions. Some also have books and
+          monographs to their credit.
+          <br />
+          The department aims to focus on imparting fundamental domain knowledge
+          through its core curriculum, responding to the changing developments
+          via offering a vibrant set of electives, and contributing to
+          technology development. We aim to continuously be broadening our
+          scope, building up on the current strengths, engage effectively with
+          the industry for technology transfer, and endeavour to set high
+          academic standards for the society.
+        </Typography>
+      </Container>
     </>
   );
-}
+};
 
-export default AboutUsPage
+export default AboutUsPage;
