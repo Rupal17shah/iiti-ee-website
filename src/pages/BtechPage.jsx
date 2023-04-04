@@ -58,10 +58,32 @@ export default function BtechPage(props) {
               container
               justifyContent={"space-around"}
               alignItems={"center"}
-              direction={"column"}
+              direction={"row"}
               spacing={6}
               sx={{ pt: 4 }}
             >
+              <Grid item>
+                <Btech_Card
+                  specialisation={"MTech"}
+                  name={"Vijay"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
+              <Grid item>
+                <Btech_Card
+                  specialisation={"MTech"}
+                  name={"Vijay"}
+                  photo={"Images/logo/VLSI.jpg"}
+                  topic={
+                    "Speech signal analysis on non-stationary signals models"
+                  }
+                  email={"vijay_as@iiti.ac.in"}
+                />
+              </Grid>
               <Grid item>
                 <Btech_Card
                   specialisation={"MTech"}
