@@ -29,27 +29,27 @@
   }
 
   50% {
-    background-image: url("/public/Images/Carousel/6.JPG");
-  }
-
-  60% {
     background-image: url("/public/Images/Carousel/7.JPG");
   }
 
-  70% {
-    background-image: url("/public/Images/Carousel/8.JPG");
+  60% {
+    background-image: url("/public/Images/Carousel/6.jpg  ");
   }
 
-  80% {
+  70% {
     background-image: url("/public/Images/Carousel/9.JPG");
   }
 
-  90% {
+  80% {
     background-image: url("/public/Images/Carousel/10.JPG");
   }
 
+  90% {
+    background-image: url("/public/Images/Carousel/11.JPG");
+  }
+
   100% {
-    background-image: url("/public/Images/Carousel/1.JPG");
+    background-image: url("/public/Images/Carousel/12.JPG");
   }
 }
 

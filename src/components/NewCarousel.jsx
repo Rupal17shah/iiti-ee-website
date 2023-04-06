@@ -13,7 +13,7 @@ const NewCarousel = () => {
         //   fontFamily={"segoeUI"}
           fontWeight={600}
         >
-          Welcome to the department of
+          Welcome to the  Department of
           <br />
           Electrical Engineering
         </Typography>

@@ -8,11 +8,8 @@ import { CardActionArea } from "@mui/material";
 import axios from "axios";
 
 export default function Common_Cards(props) {
-  const navigate = useNavigate();
-
   const [data, setData] = useState();
   const [isError, setIsError] = useState([]);
-  const [image, setImage] = useState();
   console.log(props);
   useEffect(() => {
     axios
@@ -24,8 +21,7 @@ export default function Common_Cards(props) {
     if (!isError) {
       setData("Not Available");
     }
-  }, []);
-  console.log(data);
+  }, [props.year]);
   return (
     <div>
       <Grid
@@ -39,13 +35,13 @@ export default function Common_Cards(props) {
           <>
             {console.log(item.image)}
             <Grid item mt={5}>
-              <Card sx={{ width: 150 }}>
+              <Card sx={{ width: 150, height: 150 }}>
                 {item.image ? (
                   <CardMedia
                     sx={{ height: 150 }}
-                    image={require(`D:/projects/EE Website/ee-website-backend/ee/${item.image}`)}
+                    // image={require(`D:/projects/EE Website/ee-website-backend/ee/${item.image}`)}
                     // image="D:/projects/EE Website/ee-website-backend/ee/media/nathan-anderson-L95xDkSSuWw-unsplash.jpg"
-                    title="Staff"
+                    title="Faculty"
                   />
                 ) : (
                   <></>
@@ -60,8 +56,13 @@ export default function Common_Cards(props) {
                     color="text.secondary"
                     fontSize={12}
                   >
-                    {item.roll_no} <br />
-                    {item.year} <br />
+                    <p>{item.roll_no}</p>
+                    <p> {item.year}</p>
+                    <p> {item.program}</p>
+                    <p> {item.date}</p>
+                    <p>{item.title}</p>
+
+                    <p> {item.email}</p>
                   </Typography>
                 </CardContent>
               </Card>

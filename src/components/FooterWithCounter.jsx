@@ -32,6 +32,8 @@ const FooterWithCounter = () => {
             sx={{ color: "primary.main", pb: 5 }}
           >
             Achievements
+            <br />
+            <Typography fontSize={".8rem"}>(from 2014)</Typography>
           </Typography>
 
           {/* /////////////////////////for large display////////////////////////// */}
@@ -46,7 +48,9 @@ const FooterWithCounter = () => {
                 width: "15%",
               }}
             >
-              <SupervisedUserCircle color="secondary" sx={{ fontSize: 40 }} />
+              <Link to="stats/Faculty">
+                <SupervisedUserCircle color="secondary" sx={{ fontSize: 40 }} />
+              </Link>
               <Typography color="secondary">
                 <CountUp end={17} duration={2}>
                   {({ countUpRef, start }) => (
@@ -55,6 +59,7 @@ const FooterWithCounter = () => {
                     </VisibilitySensor>
                   )}
                 </CountUp>
+                +
               </Typography>
               <Typography color="secondary">Faculty</Typography>
             </Box>
@@ -66,7 +71,9 @@ const FooterWithCounter = () => {
                 width: "15%",
               }}
             >
-              <School color="secondary" sx={{ fontSize: 40 }} />
+              <Link to="stats/Students">
+                <School color="secondary" sx={{ fontSize: 40 }} />
+              </Link>
               <Typography color="secondary">
                 <CountUp end={1115} duration={2}>
                   {({ countUpRef, start }) => (
@@ -75,6 +82,7 @@ const FooterWithCounter = () => {
                     </VisibilitySensor>
                   )}
                 </CountUp>
+                +
               </Typography>
               <Typography color="secondary">Students Graduated</Typography>
             </Box>
@@ -86,7 +94,9 @@ const FooterWithCounter = () => {
                 width: "15%",
               }}
             >
-              <LibraryBooksIcon color="secondary" sx={{ fontSize: 40 }} />
+              <Link to="stats/Publications">
+                <LibraryBooksIcon color="secondary" sx={{ fontSize: 40 }} />
+              </Link>
               <Typography color="secondary">
                 <CountUp end={1358} duration={2}>
                   {({ countUpRef, start }) => (
@@ -95,6 +105,7 @@ const FooterWithCounter = () => {
                     </VisibilitySensor>
                   )}
                 </CountUp>
+                +
               </Typography>
               <Typography color="secondary">Publications</Typography>
             </Box>
@@ -106,7 +117,9 @@ const FooterWithCounter = () => {
                 width: "15%",
               }}
             >
-              <Timeline color="secondary" sx={{ fontSize: 40 }} />
+              <Link to="stats/Placements">
+                <Timeline color="secondary" sx={{ fontSize: 40 }} />
+              </Link>
               <Typography color="secondary">
                 <CountUp end={96} duration={2}>
                   {({ countUpRef, start }) => (
@@ -127,15 +140,18 @@ const FooterWithCounter = () => {
                 width: "15%",
               }}
             >
-              <PublicIcon color="secondary" sx={{ fontSize: 40 }} />
+              <Link to="stats/Patents">
+                <PublicIcon color="secondary" sx={{ fontSize: 40 }} />
+              </Link>
               <Typography color="secondary">
-                <CountUp end={42} duration={2}>
+                <CountUp end={19} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
                       <span ref={countUpRef} />
                     </VisibilitySensor>
                   )}
                 </CountUp>
+                +
               </Typography>
               <Typography color="secondary">Patents</Typography>
             </Box>
@@ -147,7 +163,9 @@ const FooterWithCounter = () => {
                 width: "15%",
               }}
             >
-              <ExtensionIcon color="secondary" sx={{ fontSize: 40 }} />
+              <Link to="stats/Projects">
+                <ExtensionIcon color="secondary" sx={{ fontSize: 40 }} />
+              </Link>
               <Typography color="secondary">
                 <CountUp end={95} duration={2}>
                   {({ countUpRef, start }) => (
@@ -156,6 +174,7 @@ const FooterWithCounter = () => {
                     </VisibilitySensor>
                   )}
                 </CountUp>
+                +
               </Typography>
               <Typography color="secondary">Projects</Typography>
             </Box>
@@ -167,7 +186,9 @@ const FooterWithCounter = () => {
                 width: "15%",
               }}
             >
-              <CurrencyRupee color="secondary" sx={{ fontSize: 40 }} />
+              <Link to="stats/Grants">
+                <CurrencyRupee color="secondary" sx={{ fontSize: 40 }} />
+              </Link>
               <Typography color="secondary">
                 <CountUp end={32} duration={2}>
                   {({ countUpRef, start }) => (
@@ -176,7 +197,7 @@ const FooterWithCounter = () => {
                     </VisibilitySensor>
                   )}
                 </CountUp>
-                .7213 Cr
+                .7 Cr
               </Typography>
               <Typography color="secondary">Project Grant</Typography>
             </Box>
@@ -190,7 +211,7 @@ const FooterWithCounter = () => {
                 display: { xs: "flex", md: "none" },
                 flexDirection: "column",
                 alignItems: "center",
-                margin: "auto"
+                margin: "auto",
               }}
             >
               <Box
@@ -202,7 +223,12 @@ const FooterWithCounter = () => {
                   width: "100%",
                 }}
               >
-                <SupervisedUserCircle color="secondary" sx={{ fontSize: 40 }} />
+                <Link to="stats/Faculty">
+                  <SupervisedUserCircle
+                    color="secondary"
+                    sx={{ fontSize: 40 }}
+                  />
+                </Link>
                 <Typography color="secondary">
                   <CountUp end={17} duration={2}>
                     {({ countUpRef, start }) => (
@@ -211,6 +237,7 @@ const FooterWithCounter = () => {
                       </VisibilitySensor>
                     )}
                   </CountUp>
+                  +
                 </Typography>
                 <Typography color="secondary">Faculty</Typography>
               </Box>
@@ -223,7 +250,9 @@ const FooterWithCounter = () => {
                   width: "100%",
                 }}
               >
-                <School color="secondary" sx={{ fontSize: 40 }} />
+                <Link to="stats/Students">
+                  <School color="secondary" sx={{ fontSize: 40 }} />
+                </Link>
                 <Typography color="secondary">
                   <CountUp end={1115} duration={2}>
                     {({ countUpRef, start }) => (
@@ -232,6 +261,7 @@ const FooterWithCounter = () => {
                       </VisibilitySensor>
                     )}
                   </CountUp>
+                  +
                 </Typography>
                 <Typography color="secondary">Students Graduated</Typography>
               </Box>
@@ -244,7 +274,9 @@ const FooterWithCounter = () => {
                   width: "100%",
                 }}
               >
-                <LibraryBooksIcon color="secondary" sx={{ fontSize: 40 }} />
+                <Link to="stats/Publications">
+                  <LibraryBooksIcon color="secondary" sx={{ fontSize: 40 }} />
+                </Link>
                 <Typography color="secondary">
                   <CountUp end={1358} duration={2}>
                     {({ countUpRef, start }) => (
@@ -253,6 +285,7 @@ const FooterWithCounter = () => {
                       </VisibilitySensor>
                     )}
                   </CountUp>
+                  +
                 </Typography>
                 <Typography color="secondary">Publications</Typography>
               </Box>
@@ -265,7 +298,9 @@ const FooterWithCounter = () => {
                   width: "100%",
                 }}
               >
-                <Timeline color="secondary" sx={{ fontSize: 40 }} />
+                <Link to="stats/Placements">
+                  <Timeline color="secondary" sx={{ fontSize: 40 }} />
+                </Link>
                 <Typography color="secondary">
                   <CountUp end={96} duration={2}>
                     {({ countUpRef, start }) => (
@@ -287,15 +322,18 @@ const FooterWithCounter = () => {
                   width: "100%",
                 }}
               >
-                <PublicIcon color="secondary" sx={{ fontSize: 40 }} />
+                <Link to="stats/Patents">
+                  <PublicIcon color="secondary" sx={{ fontSize: 40 }} />
+                </Link>
                 <Typography color="secondary">
-                  <CountUp end={42} duration={2}>
+                  <CountUp end={19} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
                       </VisibilitySensor>
                     )}
                   </CountUp>
+                  +
                 </Typography>
                 <Typography color="secondary">Patents</Typography>
               </Box>
@@ -308,7 +346,9 @@ const FooterWithCounter = () => {
                   width: "100%",
                 }}
               >
-                <ExtensionIcon color="secondary" sx={{ fontSize: 40 }} />
+                <Link to="stats/Projects">
+                  <ExtensionIcon color="secondary" sx={{ fontSize: 40 }} />
+                </Link>
                 <Typography color="secondary">
                   <CountUp end={95} duration={2}>
                     {({ countUpRef, start }) => (
@@ -317,6 +357,7 @@ const FooterWithCounter = () => {
                       </VisibilitySensor>
                     )}
                   </CountUp>
+                  +
                 </Typography>
                 <Typography color="secondary">Projects</Typography>
               </Box>
@@ -329,15 +370,18 @@ const FooterWithCounter = () => {
                   width: "100%",
                 }}
               >
-                <CurrencyRupee color="secondary" sx={{ fontSize: 40 }} />
+                <Link to="stats/Grants">
+                  <CurrencyRupee color="secondary" sx={{ fontSize: 40 }} />
+                </Link>
                 <Typography color="secondary">
-                  <CountUp end={95} duration={2}>
+                  <CountUp end={32} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
                       </VisibilitySensor>
                     )}
-                  </CountUp>.7
+                  </CountUp>
+                  .7 Cr
                 </Typography>
                 <Typography color="secondary">Project Grant</Typography>
               </Box>

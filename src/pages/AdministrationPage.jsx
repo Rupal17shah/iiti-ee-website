@@ -65,7 +65,7 @@ export default function AdministrationPage() {
                   <Card sx={{ width: 150 }}>
                     <CardMedia
                       sx={{ height: 150 }}
-                      image="Images/Vijay.png"
+                      image="/Images/vivek.JPG"
                       title="HOD"
                     />
                     <CardContent>
@@ -103,7 +103,7 @@ export default function AdministrationPage() {
                     <Card sx={{ width: 150 }}>
                       <CardMedia
                         sx={{ height: 150 }}
-                        image="Images/Vijay.png"
+                        image="/Images/sakshi.JPG"
                         title="Staff"
                       />
                       <CardContent>

@@ -14,8 +14,8 @@ const year = (props) => {};
 
 export default function BtechPage(props) {
   const params = useParams();
-    console.log(params.program);
-    console.log(params.year);
+  console.log(params.program);
+  console.log(params.year);
 
   return (
     <div>
@@ -73,18 +73,7 @@ export default function BtechPage(props) {
               sx={{ pt: 4 }}
             >
               <Grid item>
-                <Staff_Card
-                  specialisation={"MTech"}
-                  name={"Vijay"}
-                  photo={"/Images/logo/VLSI.jpg"}
-                  research1={"Microgrids and Distributed generation"}
-                  research2={"Microgrids and Distributed generation"}
-                  research3={"Microgrids and Distributed generation"}
-                  research4={"Microgrids and Distributed generation"}
-                  email={"vijay_as@iiti.ac.in"}
-                  ph={"1234-1234-123"}
-                  address={"POD silicon"}
-                />
+                <Staff_Card />
               </Grid>
             </Grid>
           </>
@@ -97,20 +86,12 @@ export default function BtechPage(props) {
               container
               justifyContent={"space-around"}
               alignItems={"center"}
-              direction={"column"}
+              direction={"row"}
               spacing={6}
               sx={{ pt: 4 }}
             >
               <Grid item>
-                <Btech_Card
-                  specialisation={"MTech"}
-                  name={"Vijay"}
-                  photo={"Images/logo/VLSI.jpg"}
-                  topic={
-                    "Speech signal analysis on non-stationary signals models"
-                  }
-                  email={"vijay_as@iiti.ac.in"}
-                />
+                <CommonCard year={''} program={params.program} />
               </Grid>
             </Grid>
           </>
@@ -118,7 +99,7 @@ export default function BtechPage(props) {
           <></>
         )}
 
-        {params.program === "Btech" ? (
+        {params.program === "BTech" ? (
           <>
             <Grid
               container
@@ -129,10 +110,7 @@ export default function BtechPage(props) {
               sx={{ pt: 4 }}
             >
               <Grid item>
-                <CommonCard
-                  year={params.year}
-                  program={params.program}
-                />
+                <CommonCard year={params.year} program={params.program} />
               </Grid>
             </Grid>
           </>
@@ -140,7 +118,7 @@ export default function BtechPage(props) {
           <></>
         )}
 
-        {params.program === "Mtech" ? (
+        {params.program === "MTech" ? (
           <>
             <Grid
               container
@@ -201,7 +179,7 @@ export default function BtechPage(props) {
               <Grid item>
                 <CommonCard
                   name={"Vipul"}
-                  photo={"/Images/logo/VLSI.jpg"}
+                  // photo={"/Images/logo/VLSI.jpg"}
                   rollno={"210002067"}
                   year={"2021"}
                 />
@@ -225,81 +203,7 @@ export default function BtechPage(props) {
               sx={{ pt: 4 }}
             >
               <Grid item>
-                <Alumni_Cards
-                  specialisation={"MTech"}
-                  name={"Vijayyyyyyyyyyyyy"}
-                  photo={"Images/logo/VLSI.jpg"}
-                  topic={
-                    "Speech signal analysis on non-stationary signals models"
-                  }
-                  email={"vijay_as@iiti.ac.in"}
-                />
-              </Grid>
-              <Grid item>
-                <Alumni_Cards
-                  specialisation={"MTech"}
-                  name={"Vijayyyyyyyyyyyyy"}
-                  photo={"Images/logo/VLSI.jpg"}
-                  topic={
-                    "Speech signal analysis on non-stationary signals models"
-                  }
-                  email={"vijay_as@iiti.ac.in"}
-                />
-              </Grid>
-              <Grid item>
-                <Alumni_Cards
-                  specialisation={"MTech"}
-                  name={"Vijayyyyyyyyyyyyy"}
-                  photo={"Images/logo/VLSI.jpg"}
-                  topic={
-                    "Speech signal analysis on non-stationary signals models"
-                  }
-                  email={"vijay_as@iiti.ac.in"}
-                />
-              </Grid>
-              <Grid item>
-                <Alumni_Cards
-                  specialisation={"MTech"}
-                  name={"Vijayyyyyyyyyyyyy"}
-                  photo={"Images/logo/VLSI.jpg"}
-                  topic={
-                    "Speech signal analysis on non-stationary signals models"
-                  }
-                  email={"vijay_as@iiti.ac.in"}
-                />
-              </Grid>
-              <Grid item>
-                <Alumni_Cards
-                  specialisation={"MTech"}
-                  name={"Vijayyyyyyyyyyyyy"}
-                  photo={"Images/logo/VLSI.jpg"}
-                  topic={
-                    "Speech signal analysis on non-stationary signals models"
-                  }
-                  email={"vijay_as@iiti.ac.in"}
-                />
-              </Grid>
-              <Grid item>
-                <Alumni_Cards
-                  specialisation={"MTech"}
-                  name={"Vijayyyyyyyyyyyyy"}
-                  photo={"Images/logo/VLSI.jpg"}
-                  topic={
-                    "Speech signal analysis on non-stationary signals models"
-                  }
-                  email={"vijay_as@iiti.ac.in"}
-                />
-              </Grid>
-              <Grid item>
-                <Alumni_Cards
-                  specialisation={"MTech"}
-                  name={"Vijayyyyyyyyyyyyy"}
-                  photo={"Images/logo/VLSI.jpg"}
-                  topic={
-                    "Speech signal analysis on non-stationary signals models"
-                  }
-                  email={"vijay_as@iiti.ac.in"}
-                />
+                <CommonCard year={params.year} program={params.program} />
               </Grid>
             </Grid>
           </>

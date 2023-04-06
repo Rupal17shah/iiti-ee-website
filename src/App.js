@@ -3,17 +3,12 @@ import theme from "./Theme";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import Template from "./components/Template";
-// import PeoplePage from "./pages/PeoplePage";
 import BTech_Courses from "./pages/BTech_Courses";
 import PeoplePage from "./pages/PeoplePage";
-// import MTech_Courses from "./pages/MTech_Courses";
 import Research from "./pages/ResearchPage";
 import AdministrationPage from "./pages/AdministrationPage";
 import { ThemeProvider } from "@mui/material/styles";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-// importing the data
-// import AboutUs from "./data/AboutUs";
-import ContactUs from "./data/ContactUs";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Gallery from "./pages/Gallery";
 import LabPage from "./pages/LabPage";
 import Signal from "./pages/Signal";
@@ -24,8 +19,12 @@ import CoursePage from "./pages/CoursePage";
 import FooterWithCounter from "./components/FooterWithCounter";
 import NotFoundPage from "./pages/NotFoundPage";
 import BlackHeader from "./components/BlackHeader";
-import { Fragment } from "react";
 import AboutUsPage from "./pages/AboutUsPage";
+import BooksPage from "./pages/BooksPage";
+import StatsPage from "./pages/StatsPage";
+import PaperPage from "./pages/PaperPage";
+import ProgramPage from "./pages/ProgramPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   let location;
@@ -64,12 +63,32 @@ function App() {
             />
             <Route
               path="/contact"
-              element={[<BlackHeader />, <Template Data={ContactUs} />]}
+              element={[<BlackHeader />, <ContactPage />]}
             />
             <Route path="/gallery" element={[<BlackHeader />, <Gallery />]} />
             <Route
               path="/courses"
               element={[<BlackHeader />, <CoursePage />]}
+            />
+            <Route
+              path="/achievements/books"
+              element={[<BlackHeader />, <BooksPage />]}
+            />
+            <Route
+              path="/research/paper/:year"
+              element={[<BlackHeader />, <PaperPage />]}
+            />
+            <Route
+              path="/stats/:params"
+              element={[<BlackHeader />, <StatsPage />]}
+            />
+            <Route
+              path="/courses/:program"
+              element={[<BlackHeader />, <CoursePage />]}
+            />
+            <Route
+              path="/research/programs"
+              element={[<BlackHeader />, <ProgramPage />]}
             />
             <Route path="*" element={[<BlackHeader />, <NotFoundPage />]} />
           </Routes>
