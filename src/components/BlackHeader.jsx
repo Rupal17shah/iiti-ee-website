@@ -444,18 +444,6 @@ const BlackHeader = () => {
                         <ul className="black-aniani-menu">
                           <li>
                             <div className="black-link-button">
-                              <Link to="/people/MTech/2018">2018</Link>
-                            </div>
-                          </li>
-                          <Divider />
-                          <li>
-                            <div className="black-link-button">
-                              <Link to="/people/MTech/2019">2019</Link>
-                            </div>
-                          </li>
-                          <Divider />
-                          <li>
-                            <div className="black-link-button">
                               <Link to="/people/MTech/2020">2020</Link>
                             </div>
                           </li>
@@ -473,18 +461,6 @@ const BlackHeader = () => {
                       <div className="black-link-button">
                         <Link to="#">BTech Student</Link>
                         <ul className="black-aniani-menu">
-                          <li>
-                            <div className="black-link-button">
-                              <Link to="/people/BTech/2018">2018</Link>
-                            </div>
-                          </li>
-                          <Divider />
-                          <li>
-                            <div className="black-link-button">
-                              <Link to="/people/BTech/2019">2019</Link>
-                            </div>
-                          </li>
-                          <Divider />
                           <li>
                             <div className="black-link-button">
                               <Link to="/people/BTech/2020">2020</Link>
@@ -608,7 +584,7 @@ const BlackHeader = () => {
                           <li>
                             <div className="black-link-button">
                               <Link to="https://drive.google.com/file/d/1kvh7ALhO19oXuUyz4G1SvPHc9BcO968z/view?usp=share_link">
-                                2018
+                                2019
                               </Link>
                             </div>
                           </li>
@@ -619,7 +595,7 @@ const BlackHeader = () => {
 
                     <li>
                       <div className="black-link-button">
-                        <Link to="#">Projects</Link>
+                        <Link to="/projects">Projects</Link>
                       </div>
                     </li>
                   </ul>
@@ -649,18 +625,6 @@ const BlackHeader = () => {
                             </div>
                           </li>
                         </ul>
-                      </div>
-                    </li>
-                    <Divider />
-                    <li>
-                      <div className="black-link-button">
-                        <Link to="">Scholarships Publications</Link>
-                      </div>
-                    </li>
-                    <Divider />
-                    <li>
-                      <div className="black-link-button">
-                        <Link to="">Awards and Recognitions</Link>
                       </div>
                     </li>
                   </ul>

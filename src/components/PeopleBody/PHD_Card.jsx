@@ -27,7 +27,7 @@ export default function PHD_Card(props) {
                 component="img"
                 height="140"
                 image={props.photo}
-                alt="green iguana"
+                alt=""
               />
               <CardContent sx={{ mx: 3 }}>
                 <Typography

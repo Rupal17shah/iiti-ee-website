@@ -25,6 +25,7 @@ import StatsPage from "./pages/StatsPage";
 import PaperPage from "./pages/PaperPage";
 import ProgramPage from "./pages/ProgramPage";
 import ContactPage from "./pages/ContactPage";
+import ProjectPage from "./pages/ProjectPage";
 
 function App() {
   let location;
@@ -67,7 +68,7 @@ function App() {
             />
             <Route path="/gallery" element={[<BlackHeader />, <Gallery />]} />
             <Route
-              path="/courses"
+              path="/courses/:program"
               element={[<BlackHeader />, <CoursePage />]}
             />
             <Route
@@ -89,6 +90,10 @@ function App() {
             <Route
               path="/research/programs"
               element={[<BlackHeader />, <ProgramPage />]}
+            />
+            <Route
+              path="/projects"
+              element={[<BlackHeader />, <ProjectPage />]}
             />
             <Route path="*" element={[<BlackHeader />, <NotFoundPage />]} />
           </Routes>

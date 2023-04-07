@@ -8,7 +8,11 @@ const NewHeader = () => {
       <div className="navdiv">
         <nav className="naviiii">
           <div className="logo-text">
-            <img src="/Images/white-logo.png" alt="logo_png" width="100px"></img>
+            <img
+              src="/Images/white-logo.png"
+              alt="logo_png"
+              width="100px"
+            ></img>
             <div>
               <Typography variant="h5" color={"white"} padding={5}>
                 Indian Institute Of Technology Indore
@@ -75,17 +79,6 @@ const NewHeader = () => {
                     <div className="link-button">
                       <Link to="#">MTech Student</Link>
                       <ul className="aniani-menu">
-                        <li>
-                          <div className="link-button">
-                            <Link to="/people/MTech/2018">2018</Link>
-                          </div>
-                        </li>
-                        <Divider />
-                        <li>
-                          <div className="link-button">
-                            <Link to="/people/MTech/2019">2019</Link>
-                          </div>
-                        </li>
                         <Divider />
                         <li>
                           <div className="link-button">
@@ -106,18 +99,6 @@ const NewHeader = () => {
                     <div className="link-button">
                       <Link to="#">BTech Student</Link>
                       <ul className="aniani-menu">
-                        <li>
-                          <div className="link-button">
-                            <Link to="/people/BTech/2018">2018</Link>
-                          </div>
-                        </li>
-                        <Divider />
-                        <li>
-                          <div className="link-button">
-                            <Link to="/people/BTech/2019">2019</Link>
-                          </div>
-                        </li>
-                        <Divider />
                         <li>
                           <div className="link-button">
                             <Link to="/people/BTech/2020">2020</Link>
@@ -250,7 +231,7 @@ const NewHeader = () => {
 
                   <li>
                     <div className="link-button">
-                      <Link to="#">Projects</Link>
+                      <Link to="/projects">Projects</Link>
                     </div>
                   </li>
                 </ul>
@@ -283,17 +264,6 @@ const NewHeader = () => {
                     </div>
                   </li>
                   <Divider />
-                  <li>
-                    <div className="link-button">
-                      <Link to="">Scholarships Publications</Link>
-                    </div>
-                  </li>
-                  <Divider />
-                  <li>
-                    <div className="link-button">
-                      <Link to="">Awards and Recognitions</Link>
-                    </div>
-                  </li>
                 </ul>
               </li>
               <li className="menu">

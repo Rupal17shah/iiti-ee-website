@@ -10,7 +10,6 @@ const NewCarousel = () => {
         <Typography
           fontSize={"2rem"}
           margin={"auto"}
-        //   fontFamily={"segoeUI"}
           fontWeight={600}
         >
           Welcome to the  Department of

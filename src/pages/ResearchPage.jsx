@@ -65,7 +65,7 @@ export default function ResearchPage() {
           <Grid item>
             <Cards
               specialisation={"Power Electronics and Power Systems"}
-              photo={"Images/logo/power.jpg"}
+              photo={"Images/logo/power.png"}
               action={"/power"}
             />
           </Grid>

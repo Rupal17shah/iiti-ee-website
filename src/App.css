@@ -5,12 +5,11 @@
   text-decoration: none;
   /* font-family: 'Times New Roman', Times, serif; */
   /* font-family: "Ubuntu", sans-serif; */
-  
+
   /* @tailwind base;
   @tailwind components;
   @tailwind utilities; */
 }
-
 
 /* ////////////////////////Header///////////////// */
 
@@ -69,4 +68,27 @@
   background-image: url(/public/Images/bg.jpg);
   background-position: 100%;
   background-size: cover;
+}
+
+/* //////////////////////////////Table//////////////////////////////// */
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+table {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+td {
+  width: 10%;
+  padding: 1%;
+}
+th {
+  background-color: #9d0455;
+  color: #fff;
+  padding: 0.5%;
 }

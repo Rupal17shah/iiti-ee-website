@@ -35,13 +35,13 @@ export default function Common_Cards(props) {
           <>
             {console.log(item.image)}
             <Grid item mt={5}>
-              <Card sx={{ width: 150, height: 150 }}>
+              <Card sx={{ width: 150}}>
                 {item.image ? (
                   <CardMedia
                     sx={{ height: 150 }}
-                    // image={require(`D:/projects/EE Website/ee-website-backend/ee/${item.image}`)}
-                    // image="D:/projects/EE Website/ee-website-backend/ee/media/nathan-anderson-L95xDkSSuWw-unsplash.jpg"
+                    image={`http://localhost:8000${item.image}`}
                     title="Faculty"
+                    loading="lazy"
                   />
                 ) : (
                   <></>
