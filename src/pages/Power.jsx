@@ -58,6 +58,7 @@ export default function Power() {
               </Box>
             </motion.div>
           </Box>
+          <img src="/Images/power_log.JPG" alt="" />
           <br />
           <br />
 

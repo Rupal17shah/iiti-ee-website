@@ -59,7 +59,9 @@ export default function Vlsi() {
               </Box>
             </motion.div>
           </Box>
+
           <br />
+          <img src="/Images/vlsi_log.JPG" alt="" />
           <br />
 
           {b?.map((item2, i) => (

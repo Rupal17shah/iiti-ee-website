@@ -64,6 +64,7 @@ export default function BtechPage(props) {
 
         {params.program === "Faculty" ? (
           <>
+            <img src="/Images/Carousel/1.JPG" />
             <Grid
               container
               justifyContent={"space-around"}
@@ -82,6 +83,7 @@ export default function BtechPage(props) {
         )}
         {params.program === "Staff" ? (
           <>
+            <img src="/Images/bg_3.JPG" />
             <Grid
               container
               justifyContent={"space-around"}
@@ -91,7 +93,7 @@ export default function BtechPage(props) {
               sx={{ pt: 4 }}
             >
               <Grid item>
-                <CommonCard year={''} program={params.program} />
+                <CommonCard year={""} program={params.program} />
               </Grid>
             </Grid>
           </>
@@ -101,6 +103,10 @@ export default function BtechPage(props) {
 
         {params.program === "BTech" ? (
           <>
+            {console.log(typeof(params.year))}
+            {params.year === '2022' ? <img src="/Images/btech26.JPG" /> : <></>}
+            {params.year === '2021' ? <img src="/Images/btech25.JPG" /> : <></>}
+            {params.year === '2020' ? <img src="/Images/btech24.JPG" /> : <></>}
             <Grid
               container
               justifyContent={"space-around"}
@@ -120,6 +126,7 @@ export default function BtechPage(props) {
 
         {params.program === "MTech" ? (
           <>
+            <img src="/Images/mtech25.JPG"></img>
             <Grid
               container
               justifyContent={"space-around"}

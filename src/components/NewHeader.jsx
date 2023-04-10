@@ -9,7 +9,7 @@ const NewHeader = () => {
         <nav className="naviiii">
           <div className="logo-text">
             <img
-              src="/Images/white-logo.png"
+              src="/Images/logo/blue_logo.png"
               alt="logo_png"
               width="100px"
             ></img>

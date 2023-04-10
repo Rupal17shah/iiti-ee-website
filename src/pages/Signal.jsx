@@ -59,6 +59,7 @@ export default function Signal() {
             </motion.div>
           </Box>
           <br />
+          <img src="/Images/signal_log.JPG" alt="" />
           <br />
 
           {b?.map((item2, i) => (
