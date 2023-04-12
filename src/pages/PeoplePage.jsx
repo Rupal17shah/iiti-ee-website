@@ -1,16 +1,10 @@
 import React from "react";
 import { Typography, Box, Container, Grid } from "@mui/material";
 import { motion } from "framer-motion";
-import axios from "axios";
-import Btech_Card from "../components/PeopleBody/Btech_Card";
 import Staff_Card from "../components/PeopleBody/Staff_Card";
-import PHD_Card from "../components/PeopleBody/PHD_Card";
-import { useState, useEffect } from "react";
-import Alumni_Cards from "../components/PeopleBody/Alumni_Cards";
 import CommonCard from "../components/PeopleBody/Common_Cards";
 import { useParams } from "react-router-dom";
-
-const year = (props) => {};
+import Carousel from "../components/Carousel";
 
 export default function BtechPage(props) {
   const params = useParams();
@@ -23,7 +17,8 @@ export default function BtechPage(props) {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+          viewport={{ once: true }}
         >
           <Typography variant="h4" color="primary" textAlign="center">
             People
@@ -36,16 +31,18 @@ export default function BtechPage(props) {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+            viewport={{ once: true }}
           >
-            <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
+            <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
               <hr />
             </Box>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+            viewport={{ once: true }}
           >
             <Box sx={{ borderTop: "7px solid black", px: 4 }}>
               <hr />
@@ -64,7 +61,8 @@ export default function BtechPage(props) {
 
         {params.program === "Faculty" ? (
           <>
-            <img src="/Images/Carousel/1.JPG" />
+            {/* <img src="/Images/Carousel/1.JPG" /> */}
+            <Carousel page="people" program="Faculty" />
             <Grid
               container
               justifyContent={"space-around"}
@@ -83,7 +81,7 @@ export default function BtechPage(props) {
         )}
         {params.program === "Staff" ? (
           <>
-            <img src="/Images/bg_3.JPG" />
+            <Carousel page="people" program="Staff" />
             <Grid
               container
               justifyContent={"space-around"}
@@ -103,10 +101,27 @@ export default function BtechPage(props) {
 
         {params.program === "BTech" ? (
           <>
-            {console.log(typeof(params.year))}
-            {params.year === '2022' ? <img src="/Images/btech26.JPG" /> : <></>}
-            {params.year === '2021' ? <img src="/Images/btech25.JPG" /> : <></>}
-            {params.year === '2020' ? <img src="/Images/btech24.JPG" /> : <></>}
+            {console.log(typeof params.year)}
+            {params.year === "2022" ? (
+              <Carousel page="people" program="BTech" year="2022" />
+            ) : (
+              <></>
+            )}
+            {params.year === "2021" ? (
+              <Carousel page="people" program="BTech" year="2021" />
+            ) : (
+              <></>
+            )}
+            {params.year === "2020" ? (
+              <Carousel page="people" program="BTech" year="2020" />
+            ) : (
+              <></>
+            )}
+            {params.year === "2019" ? (
+              <Carousel page="people" program="BTech" year="2019" />
+            ) : (
+              <></>
+            )}
             <Grid
               container
               justifyContent={"space-around"}

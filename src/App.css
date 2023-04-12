@@ -3,41 +3,10 @@
   margin: 0%;
   box-sizing: border-box;
   text-decoration: none;
-  /* font-family: 'Times New Roman', Times, serif; */
-  /* font-family: "Ubuntu", sans-serif; */
-
-  /* @tailwind base;
-  @tailwind components;
-  @tailwind utilities; */
+  list-style: none;
 }
 
-/* ////////////////////////Header///////////////// */
 
-/* .nav-links {
-  text-transform: capitalize;
-  color: #000000;
-}
-
-.nav-links:hover {
-  
-  font-weight: 700;
-  color: #9d0455;
-} */
-
-/* /////////////////////////////////////// */
-
-/* ///////////////////////////////////////// */
-/* ////////////////////////Header///////////////// */
-
-/* ////////////////////////Carousel/////////////////////////// */
-/* .carousel-text {
-  position: absolute;
-  top: 200px;
-  margin: auto;
-  text-shadow: 4px 4px 5px #000000;
-} */
-
-/* ////////////////////////Carousel/////////////////////////// */
 .carousel-text {
   position: absolute;
   top: 200px;
@@ -48,6 +17,7 @@
 
 .carousel-div {
   max-height: 80vh;
+  /* border-radius: 20%; */
 }
 
 /* /////////////////////////Footer/////////////////////////////////// */
@@ -88,7 +58,7 @@ td {
   padding: 1%;
 }
 th {
-  background-color: #9d0455;
+  background-color: #105297;
   color: #fff;
   padding: 0.5%;
 }

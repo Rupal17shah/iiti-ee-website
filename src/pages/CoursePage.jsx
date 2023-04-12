@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Typography, Box, Container, Grid } from "@mui/material";
+import { Typography, Box, Container } from "@mui/material";
 import { motion } from "framer-motion";
-import Cards from "../components/ResearchBody/Cards";
 import { useParams } from "react-router-dom";
 
 export default function CoursePage() {
@@ -21,7 +20,6 @@ export default function CoursePage() {
       setIsError("Not Available");
     }
   }, [param.program]);
-  // console.log(data);
   useEffect(() => {
     axios
       .get(`http://127.0.0.1:8000/api/course/read/elective/${param.program}`)
@@ -37,7 +35,8 @@ export default function CoursePage() {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+          viewport={{ once: true }}
         >
           <Typography variant="h4" color="primary" textAlign="center">
             Courses
@@ -50,16 +49,18 @@ export default function CoursePage() {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+            viewport={{ once: true }}
           >
-            <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
+            <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
               <hr />
             </Box>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+            viewport={{ once: true }}
           >
             <Box sx={{ borderTop: "7px solid black", px: 4 }}>
               <hr />
@@ -71,7 +72,6 @@ export default function CoursePage() {
         <Typography variant="h6" color="primary.main" textAlign="center">
           {param.program}
         </Typography>
-        {/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <Box sx={{ py: 4 }}>
           {param.program === "BTech" ? (
             <>

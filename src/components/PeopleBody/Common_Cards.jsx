@@ -3,8 +3,6 @@ import { Card, CardMedia } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { CardActionArea } from "@mui/material";
 import axios from "axios";
 
 export default function Common_Cards(props) {
@@ -35,16 +33,23 @@ export default function Common_Cards(props) {
           <>
             {console.log(item.image)}
             <Grid item mt={5}>
-              <Card sx={{ width: 150}}>
+              <Card sx={{ width: 150, height: 280 }}>
                 {item.image ? (
                   <CardMedia
-                    sx={{ height: 150 }}
+                    sx={{ height: "150px" }}
                     image={`http://localhost:8000${item.image}`}
                     title="Faculty"
                     loading="lazy"
                   />
                 ) : (
-                  <></>
+                  <>
+                    <CardMedia
+                      sx={{ height: 150 }}
+                      image="/Images/profile_placeholder.jpg"
+                      title="Faculty"
+                      loading="lazy"
+                    />
+                  </>
                 )}
                 {/* <CardMedia sx={{ height: 150 }} image={props.photo} title="Staff" /> */}
                 <CardContent>

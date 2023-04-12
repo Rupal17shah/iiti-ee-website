@@ -10,7 +10,7 @@ const HomePage = (props) => {
   return (
     <>
       <Box sx={{ display: { xs: "block", md: "none" } }}>
-        <Carousel />
+        <Carousel page="home" program=""/>
       </Box>
       <Box sx={{ display: { xs: "none", md: "block" } }}>
         <NewCarousel />

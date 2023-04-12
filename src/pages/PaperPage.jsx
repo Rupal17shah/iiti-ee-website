@@ -1,17 +1,15 @@
-import React from 'react'
+import React from "react";
 import { Typography, Box, Container, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
-import { useEffect,useState } from 'react';
+import { useEffect, useState } from "react";
 export default function PaperPage() {
-  const [data,setData] = useState();
-  useEffect(()=>{
-
-  },[])
-    const params = useParams();
+  const [data, setData] = useState();
+  useEffect(() => {}, []);
+  const params = useParams();
   return (
     <div>
-<>
+      <>
         <Container sx={{ py: 2 }}>
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -31,7 +29,7 @@ export default function PaperPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
             >
-              <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
+              <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
                 <hr />
               </Box>
             </motion.div>
@@ -48,35 +46,26 @@ export default function PaperPage() {
           <br />
           <br />
           <Typography variant="h5" color="teritiary" textAlign="center">
-              {params.year}
-            </Typography>
-<br/>
-<br/>
-            <table>
-              <tr>
-              <th style={{width:"50vw", textAlign:"center"}}>
-                Person
-                </th>
-                <th style={{width:"50vw", textAlign:"center"}}>
-                Papers
-                </th>
+            {params.year}
+          </Typography>
+          <br />
+          <br />
+          <table>
+            <tr>
+              <th style={{ width: "50vw", textAlign: "center" }}>Person</th>
+              <th style={{ width: "50vw", textAlign: "center" }}>Papers</th>
+            </tr>
+            {data?.map((item, key) => (
+              <>
+                <tr>
+                  <td style={{ width: "50vw" }}>{item.person}</td>
+                  <td style={{ width: "50vw" }}>{item.paper}</td>
                 </tr>
-                {data?.map((item,key)=>
-                (
-                  <>
-<tr>
-  <td style={{width:"50vw"}}>
-  {item.person}
-    </td>
-    <td style={{width:"50vw"}}>
-  {item.paper}
-    </td>
-  </tr>
-                  </>
-                ))}
-              </table>
+              </>
+            ))}
+          </table>
         </Container>
       </>
     </div>
-  )
+  );
 }

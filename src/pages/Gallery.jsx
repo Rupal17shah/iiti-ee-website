@@ -18,8 +18,8 @@ class Gallery extends React.Component {
     this.setState({ innerWidth: window.innerWidth });
   }
   getWidth(innerWidth) {
-    if (innerWidth <= 700) return [1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 2];
-    return [1, 3, 2, 3, 2, 3, 2];
+    if (innerWidth <= 700) return [1, 2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1];
+    return [1, 3, 2, 3, 2, 3, 2, 2, 2];
   }
   render() {
     const setting = {
@@ -76,6 +76,18 @@ class Gallery extends React.Component {
         {
           source: "Images/gallery/9K6A6861.JPG",
         },
+        {
+          source: "Images/gallery/1.JPG",
+        },
+        {
+          source: "Images/gallery/13.JPG",
+        },
+        {
+          source: "Images/gallery/2.JPG",
+        },
+        {
+          source: "Images/gallery/btech25.JPG",
+        },
       ],
       showNumOfRemainingPhotos: true,
     };
@@ -86,7 +98,8 @@ class Gallery extends React.Component {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+            viewport={{ once: true }}
           >
             <Typography variant="h4" color="primary" textAlign="center">
               Gallery
@@ -99,16 +112,18 @@ class Gallery extends React.Component {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+              viewport={{ once: true }}
             >
-              <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
+              <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
                 <hr />
               </Box>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+              viewport={{ once: true }}
             >
               <Box sx={{ borderTop: "7px solid black", px: 4 }}>
                 <hr />

@@ -25,7 +25,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
           >
-            <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
+            <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
               <hr />
             </Box>
           </motion.div>
@@ -53,8 +53,9 @@ export default function Contact() {
             Pod 1A Building
             <br /> Indian Institute of Technology Indore
             <br /> Khandwa Road, Simrol
-                      <br /> Indore, Madhya Pradesh, India 453552<br />
-                      Email: hodee@iiti.ac.in
+            <br /> Indore, Madhya Pradesh, India 453552
+            <br />
+            Email: hodee@iiti.ac.in
           </Box>
 
           <Box

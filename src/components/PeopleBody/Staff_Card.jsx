@@ -3,13 +3,9 @@ import { Paper } from "@mui/material";
 import { Container } from "@mui/material";
 import { Typography } from "@mui/material";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-
-import Grid from "@mui/material/Grid";
-
 import { Box } from "@mui/material";
+
 const Staff_Card = () => {
-  const param = useParams();
   const [data, setData] = useState();
   const [isError, setIsError] = useState();
   useEffect(() => {
@@ -84,6 +80,7 @@ const Staff_Card = () => {
               <Box>
                 <img
                   width="110"
+                  height="169"
                   src={`http://localhost:8000${item.image}`}
                   loading="lazy"
                 />
@@ -112,53 +109,6 @@ const Staff_Card = () => {
         ))}
       </Box>
     </>
-    // <>
-    //   <Container>
-    //     {data?.map((item, i) => (
-    //       <>
-    //         <Paper
-    //           sx={{
-    //             display: "flex",
-    //             justifyContent: "center",
-    //             alignItems: "center",
-    //             px: 3,
-    //             my: 3,
-    //             width: "100%",
-    //           }}
-    //         >
-    //           <Grid container direction="row">
-    //             <Grid item md="6">
-    //               {/* <img src={`localhost:8000${item.image}`} /> */}
-    //               <img width='100'
-    //                 src={`http://localhost:8000${item.image}`}
-    //                 loading="lazy"
-    //               />
-    //             </Grid>
-    //             <Grid item>
-    //               <Typography variant="h5" color="primary">
-    //                 <a href={`${item.link}`}>{item.name}</a>
-    //               </Typography>
-    //               <Typography variant="h7">{item.title}</Typography>
-
-    //               <Typography fontWeight="600">Research Interest:</Typography>
-    //               <Box>
-    //                 <Typography fontSize="0.8rem">{item.details}</Typography>
-    //               </Box>
-    //             </Grid>
-    //             <Grid item>
-    //               <Typography fontSize="0.8rem">
-    //                 Email: <a href={`mailto:${item.email}`}>{item.email}</a>
-    //               </Typography>
-    //               <Typography fontSize="0.8rem">
-    //                 Address:{item.address}
-    //               </Typography>
-    //             </Grid>
-    //           </Grid>
-    //         </Paper>
-    //       </>
-    //     ))}
-    //   </Container>
-    // </>
   );
 };
 

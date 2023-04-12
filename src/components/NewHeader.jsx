@@ -101,6 +101,12 @@ const NewHeader = () => {
                       <ul className="aniani-menu">
                         <li>
                           <div className="link-button">
+                            <Link to="/people/BTech/2019">2019</Link>
+                          </div>
+                        </li>
+                        <Divider />
+                        <li>
+                          <div className="link-button">
                             <Link to="/people/BTech/2020">2020</Link>
                           </div>
                         </li>
@@ -275,24 +281,18 @@ const NewHeader = () => {
                     </div>
                   </li>
                   <Divider />
-                  {/* <li>
-                    <div className="link-button">
-                      <Link to="/achievements/paper">Paper Published</Link>
-                    </div>
-                  </li> */}
-                  <Divider />
                   <li>
                     <div className="link-button">
-                      <Link to="/achievements/scholarship">
-                        Scholarship publication
+                      <Link to="https://docs.google.com/document/d/1U4dVQAq3rLZoSBwhSiy2ZiOkuDGTsoPY/edit?usp=sharing&ouid=109062875077411154816&rtpof=true&sd=true">
+                        Faculty Recognition
                       </Link>
                     </div>
                   </li>
                   <Divider />
                   <li>
                     <div className="link-button">
-                      <Link to="/achievements/awards">
-                        Awards & Recognition
+                      <Link to="https://docs.google.com/document/d/1ousTmg6WNb-loWzR4uylvakgNBpFpXG4/edit?usp=sharing&ouid=109062875077411154816&rtpof=true&sd=true">
+                        Student Achievements
                       </Link>
                     </div>
                   </li>

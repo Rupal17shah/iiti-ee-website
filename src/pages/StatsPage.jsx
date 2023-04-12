@@ -12,7 +12,8 @@ export default function StatsPage() {
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+            viewport={{ once: true }}
           >
             <Typography variant="h4" color="primary" textAlign="center">
               Statistics
@@ -25,16 +26,18 @@ export default function StatsPage() {
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+              viewport={{ once: true }}
             >
-              <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
+              <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
                 <hr />
               </Box>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+              viewport={{ once: true }}
             >
               <Box sx={{ borderTop: "7px solid black", px: 4 }}>
                 <hr />
@@ -42,17 +45,17 @@ export default function StatsPage() {
             </motion.div>
           </Box>
           <br />
-          <Box>
+          <center>
             {param.params === "Faculty" ? (
               <>
-                <img src="/Images/faculty_number.jpg" />
+                <img width="50%" src="/Images/faculty_number.jpg" />
               </>
             ) : (
               <></>
             )}
             {param.params === "Students" ? (
               <>
-                <img src="/Images/degree_awarded.jpg" />
+                <img width="50%" src="/Images/degree_awarded.jpg" />
               </>
             ) : (
               <></>
@@ -60,7 +63,7 @@ export default function StatsPage() {
             {param.params === "Publications" ? (
               <>
                 <center>
-                  <img src="/Images/journals.jpg" />
+                  <img width="50%" src="/Images/journals.jpg" />
                 </center>
               </>
             ) : (
@@ -74,15 +77,15 @@ export default function StatsPage() {
                   justifyContent: "center",
                 }}
               >
-                <img width="50%" src="/Images/ug_placements.jpg" />
-                <img width="50%" src="/Images/pg_placements.jpg" />
+                <img width="40%" src="/Images/ug_placements.jpg" />
+                <img width="40%" src="/Images/pg_placements.jpg" />
               </Box>
             ) : (
               <></>
             )}
             {param.params === "Patents" ? (
               <>
-                <img src="/Images/patent_data.jpg" />
+                <img width="50%" src="/Images/patent_data.png" />
               </>
             ) : (
               <></>
@@ -90,7 +93,7 @@ export default function StatsPage() {
             {param.params === "Projects" ? (
               <>
                 <center>
-                  <img src="/Images/projects_number.jpg" />
+                  <img width="50%" src="/Images/projects_number.jpg" />
                 </center>
               </>
             ) : (
@@ -98,12 +101,12 @@ export default function StatsPage() {
             )}
             {param.params === "Grants" ? (
               <>
-                <img src="/Images/project_grant.jpg" />
+                <img width="50%" src="/Images/project_grant.jpg" />
               </>
             ) : (
               <></>
             )}
-          </Box>
+          </center>
         </Container>
       </>
     </div>

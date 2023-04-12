@@ -89,7 +89,7 @@ export default function Events() {
           <Divider
             sx={{ bgcolor: "primary.main", borderBottomWidth: 1, opacity: 1 }}
           />
-          {/* <hr style={{ color: "#9D0455", borderColor:"#9D0455"}}></hr> */}
+          {/* <hr style={{ color: "#105297", borderColor:"#105297"}}></hr> */}
           <Grid>
             <br />
             <Container>

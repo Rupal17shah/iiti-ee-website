@@ -25,7 +25,8 @@ export default function LabPage() {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
+          transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+          viewport={{ once: true }}
         >
           <Typography variant="h4" color="primary" textAlign="center">
             Major Laboratories
@@ -40,7 +41,7 @@ export default function LabPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 100 }}
           >
-            <Box sx={{ borderTop: "7px solid #9d0455", px: 5 }}>
+            <Box sx={{ borderTop: "7px solid #105297", px: 5 }}>
               <hr />
             </Box>
           </motion.div>
@@ -60,7 +61,7 @@ export default function LabPage() {
         {labs.map((item, i) => (
           <>
             <Typography>
-              <a style={{ color: "#9d0455" }} href={item.link}>
+              <a style={{ color: "#105297" }} href={item.link}>
                 {item.name}
               </a>
               - led by {item.person}

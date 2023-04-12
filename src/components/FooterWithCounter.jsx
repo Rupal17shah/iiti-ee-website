@@ -8,10 +8,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { Link } from "react-router-dom";
 //icons
-import TerminalIcon from "@mui/icons-material/Terminal";
-import PeopleIcon from "@mui/icons-material/People";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
-import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import PublicIcon from "@mui/icons-material/Public";
 import ExtensionIcon from "@mui/icons-material/Extension";
 import {
@@ -23,21 +20,25 @@ import {
 
 const FooterWithCounter = () => {
   return (
-    <>
-      <Box className="Footer-div">
-        <Box className="bg-text" sx={{ paddingTop: 3 }}>
-          <Typography
-            textAlign="center"
-            variant="h5"
-            sx={{ color: "primary.main", pb: 5 }}
-          >
-            Achievements
-            <br />
-            <Typography fontSize={".8rem"}>(from 2014)</Typography>
-          </Typography>
+    <Box className="Footer-div">
+      <Box className="bg-text" sx={{ paddingTop: 3 }}>
+        <Typography
+          textAlign="center"
+          variant="h5"
+          sx={{ color: "primary.main", pb: 5 }}
+        >
+          Achievements
+          <br />
+          <Typography fontSize={".8rem"}>(from 2014)</Typography>{" "}
+        </Typography>
 
-          {/* /////////////////////////for large display////////////////////////// */}
-
+        {/* /////////////////////////for large display////////////////////////// */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.01, type: "spring", stiffness: 35 }}
+          viewport={{ once: true }}
+        >
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Box
               sx={{
@@ -48,11 +49,14 @@ const FooterWithCounter = () => {
                 width: "15%",
               }}
             >
-              <Link to="stats/Faculty">
-                <SupervisedUserCircle color="secondary" sx={{ fontSize: 40 }} />
+              <Link to="people/Faculty">
+                <SupervisedUserCircle
+                  color="secondary"
+                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                />
               </Link>
               <Typography color="secondary">
-                <CountUp end={17} duration={2}>
+                <CountUp end={18} duration={2}>
                   {({ countUpRef, start }) => (
                     <VisibilitySensor onChange={start} delayedCall>
                       <span ref={countUpRef} />
@@ -72,7 +76,10 @@ const FooterWithCounter = () => {
               }}
             >
               <Link to="stats/Students">
-                <School color="secondary" sx={{ fontSize: 40 }} />
+                <School
+                  color="secondary"
+                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                />
               </Link>
               <Typography color="secondary">
                 <CountUp end={1115} duration={2}>
@@ -95,7 +102,10 @@ const FooterWithCounter = () => {
               }}
             >
               <Link to="stats/Publications">
-                <LibraryBooksIcon color="secondary" sx={{ fontSize: 40 }} />
+                <LibraryBooksIcon
+                  color="secondary"
+                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                />
               </Link>
               <Typography color="secondary">
                 <CountUp end={1358} duration={2}>
@@ -118,7 +128,10 @@ const FooterWithCounter = () => {
               }}
             >
               <Link to="stats/Placements">
-                <Timeline color="secondary" sx={{ fontSize: 40 }} />
+                <Timeline
+                  color="secondary"
+                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                />
               </Link>
               <Typography color="secondary">
                 <CountUp end={96} duration={2}>
@@ -141,7 +154,10 @@ const FooterWithCounter = () => {
               }}
             >
               <Link to="stats/Patents">
-                <PublicIcon color="secondary" sx={{ fontSize: 40 }} />
+                <PublicIcon
+                  color="secondary"
+                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                />
               </Link>
               <Typography color="secondary">
                 <CountUp end={19} duration={2}>
@@ -164,7 +180,10 @@ const FooterWithCounter = () => {
               }}
             >
               <Link to="stats/Projects">
-                <ExtensionIcon color="secondary" sx={{ fontSize: 40 }} />
+                <ExtensionIcon
+                  color="secondary"
+                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                />
               </Link>
               <Typography color="secondary">
                 <CountUp end={95} duration={2}>
@@ -187,7 +206,10 @@ const FooterWithCounter = () => {
               }}
             >
               <Link to="stats/Grants">
-                <CurrencyRupee color="secondary" sx={{ fontSize: 40 }} />
+                <CurrencyRupee
+                  color="secondary"
+                  sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                />
               </Link>
               <Typography color="secondary">
                 <CountUp end={32} duration={2}>
@@ -202,9 +224,15 @@ const FooterWithCounter = () => {
               <Typography color="secondary">Project Grant</Typography>
             </Box>
           </Box>
+        </motion.div>
 
-          {/* /////////////////////////for small display////////////////////////// */}
-
+        {/* /////////////////////////for small display////////////////////////// */}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.01, type: "spring", stiffness: 35 }}
+          viewport={{ once: true }}
+        >
           <Box>
             <Box
               sx={{
@@ -223,14 +251,14 @@ const FooterWithCounter = () => {
                   width: "100%",
                 }}
               >
-                <Link to="stats/Faculty">
+                <Link to="people/Faculty">
                   <SupervisedUserCircle
                     color="secondary"
-                    sx={{ fontSize: 40 }}
+                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
                   />
                 </Link>
                 <Typography color="secondary">
-                  <CountUp end={17} duration={2}>
+                  <CountUp end={18} duration={2}>
                     {({ countUpRef, start }) => (
                       <VisibilitySensor onChange={start} delayedCall>
                         <span ref={countUpRef} />
@@ -251,7 +279,10 @@ const FooterWithCounter = () => {
                 }}
               >
                 <Link to="stats/Students">
-                  <School color="secondary" sx={{ fontSize: 40 }} />
+                  <School
+                    color="secondary"
+                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  />
                 </Link>
                 <Typography color="secondary">
                   <CountUp end={1115} duration={2}>
@@ -275,7 +306,10 @@ const FooterWithCounter = () => {
                 }}
               >
                 <Link to="stats/Publications">
-                  <LibraryBooksIcon color="secondary" sx={{ fontSize: 40 }} />
+                  <LibraryBooksIcon
+                    color="secondary"
+                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  />
                 </Link>
                 <Typography color="secondary">
                   <CountUp end={1358} duration={2}>
@@ -299,7 +333,10 @@ const FooterWithCounter = () => {
                 }}
               >
                 <Link to="stats/Placements">
-                  <Timeline color="secondary" sx={{ fontSize: 40 }} />
+                  <Timeline
+                    color="secondary"
+                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  />
                 </Link>
                 <Typography color="secondary">
                   <CountUp end={96} duration={2}>
@@ -323,7 +360,10 @@ const FooterWithCounter = () => {
                 }}
               >
                 <Link to="stats/Patents">
-                  <PublicIcon color="secondary" sx={{ fontSize: 40 }} />
+                  <PublicIcon
+                    color="secondary"
+                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  />
                 </Link>
                 <Typography color="secondary">
                   <CountUp end={19} duration={2}>
@@ -347,7 +387,10 @@ const FooterWithCounter = () => {
                 }}
               >
                 <Link to="stats/Projects">
-                  <ExtensionIcon color="secondary" sx={{ fontSize: 40 }} />
+                  <ExtensionIcon
+                    color="secondary"
+                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  />
                 </Link>
                 <Typography color="secondary">
                   <CountUp end={95} duration={2}>
@@ -371,7 +414,10 @@ const FooterWithCounter = () => {
                 }}
               >
                 <Link to="stats/Grants">
-                  <CurrencyRupee color="secondary" sx={{ fontSize: 40 }} />
+                  <CurrencyRupee
+                    color="secondary"
+                    sx={{ fontSize: 40, "&:hover": { color: "#105297" } }}
+                  />
                 </Link>
                 <Typography color="secondary">
                   <CountUp end={32} duration={2}>
@@ -409,9 +455,15 @@ const FooterWithCounter = () => {
               </Box> */}
             </Box>
           </Box>
-
-          {/* /////////////////////////for small display////////////////////////// */}
-          <Divider color="gray" />
+        </motion.div>
+        {/* /////////////////////////for small display////////////////////////// */}
+        <Divider color="gray" />
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.01, type: "spring", stiffness: 35 }}
+          viewport={{ once: true }}
+        >
           <Box
             sx={{
               // backgroundColor: "tertiary.main",
@@ -431,7 +483,8 @@ const FooterWithCounter = () => {
               <motion.span
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
+                transition={{ duration: 0.01, type: "spring", stiffness: 35 }}
+                viewport={{ once: true }}
                 className="w-1/3"
               >
                 <Box className="footer-info" sx={{ mx: 3 }}>
@@ -450,7 +503,8 @@ const FooterWithCounter = () => {
               <motion.span
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
+                transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
+                viewport={{ once: true }}
               >
                 <Box className="footer-Links">
                   <Typography
@@ -756,7 +810,7 @@ const FooterWithCounter = () => {
               {/* <motion.span
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, type: "spring", stiffness: 50 }}
+                transition={{ duration: 0.3, type: "spring", stiffness: 35 }}
               >
                 <Box className="footer-map" sx={{ paddingBottom: 2 }}>
                   <iframe
@@ -772,21 +826,21 @@ const FooterWithCounter = () => {
               </motion.span> */}
             </Box>
           </Box>
+        </motion.div>
 
-          <Divider />
-          <Box
-            sx={{
-              backgroundColor: "#1e1e1e",
-            }}
-          >
-            <Typography color="secondary" textAlign="center" sx={{ p: 2 }}>
-              ©️Department of Electrical Engineering, IIT Indore - All Rights
-              Reserved
-            </Typography>
-          </Box>
+        <Divider />
+        <Box
+          sx={{
+            backgroundColor: "#1e1e1e",
+          }}
+        >
+          <Typography color="secondary" textAlign="center" sx={{ p: 2 }}>
+            ©️Department of Electrical Engineering, IIT Indore - All Rights
+            Reserved
+          </Typography>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 
